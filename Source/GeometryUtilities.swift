@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import StringUtilities
 
 public struct GeometryUtilities {
 
@@ -20,7 +21,7 @@ public struct GeometryUtilities {
 
 	 - returns: Minimum and maximum longitude and latitude.
 	 */
-	public  static func minimumAndMaximumLongitudeAndLatitudeInWKTGeometry(
+	public static func minimumAndMaximumLongitudeAndLatitudeInWKTGeometry(
 		wkt: String
 	) -> (
 		min: (lon: Double, lat: Double),
