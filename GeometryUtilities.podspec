@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "GeometryUtilities"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "A collection of utilities to handle geometry in WKT format"
 
   # This description is used to generate tags and improve search results.
@@ -138,6 +138,6 @@ Pod::Spec.new do |s|
   #s.preserve_path = "${PODS_ROOT}/VisualAPI/BridgingHeader.h"
   #s.xcconfig = { 'SWIFT_OBJC_BRIDGING_HEADER' => '${PODS_ROOT}/VisualAPI/BridgingHeader.h' }
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  # s.dependency "JSONKit", "~> 1.4"
+  s.dependency "StringUtilities", "~> 0.0.1"
 
 end
