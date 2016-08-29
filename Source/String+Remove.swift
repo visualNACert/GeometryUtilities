@@ -18,7 +18,7 @@ extension String {
 
 	 - returns: Resulting string.
 	 */
-	public func stringByRemoving(target: String) -> String {
+	func stringByRemoving(target: String) -> String {
 		return self.stringByReplacingOccurrencesOfString(target, withString: "")
 	}
 
@@ -30,7 +30,7 @@ extension String {
 
 	 - returns: Resulting string.
 	 */
-	public func stringByRemoving(targets: [String]) -> String {
+	func stringByRemoving(targets: [String]) -> String {
 		return targets.reduce(self) { $0.stringByRemoving($1) }
 	}
 

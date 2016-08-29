@@ -11,7 +11,7 @@ import Foundation
 extension String {
 
 	/// Cache of regular expressions created.
-	public static var regexCache = [String: NSRegularExpression]()
+	static var regexCache = [String: NSRegularExpression]()
 
 	/**
 	 Returns matches for given regex in this string.
@@ -22,7 +22,7 @@ extension String {
 
 	 - returns: Matches for given regex in this string.
 	 */
-	public func matchesForRegex(pattern: String) throws -> [String] {
+	func matchesForRegex(pattern: String) throws -> [String] {
 
 		let regex: NSRegularExpression
 		if let r = String.regexCache[pattern] {
