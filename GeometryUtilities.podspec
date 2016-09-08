@@ -69,7 +69,7 @@ Pod::Spec.new do |s|
 
   #  When using multiple platforms
   s.ios.deployment_target = "8.0"
-  s.osx.deployment_target = "10.11"
+  s.osx.deployment_target = "10.10"
   # s.watchos.deployment_target = "2.0"
   # s.tvos.deployment_target = "9.0"
 
@@ -94,8 +94,8 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "Source", "Source/**/*.{h,m,swift}"
-  s.exclude_files = "Source/Exclude"
+  s.ios.source_files = 'Source/{iOS}/**/*', 'Source/*.{h,m,swift}'
+  s.osx.source_files = 'Source/{OSX}/**/*', 'Source/*.{h,m,swift}'
 
   # s.public_header_files = "Classes/**/*.h"
 
@@ -138,6 +138,6 @@ Pod::Spec.new do |s|
   #s.preserve_path = "${PODS_ROOT}/VisualAPI/BridgingHeader.h"
   #s.xcconfig = { 'SWIFT_OBJC_BRIDGING_HEADER' => '${PODS_ROOT}/VisualAPI/BridgingHeader.h' }
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  s.dependency "StringUtilities", "~> 0.0.1"
+  s.dependency 'StringUtilities'
 
 end

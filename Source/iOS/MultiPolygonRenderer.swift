@@ -7,7 +7,7 @@
 //
 
 import MapKit
-
+import UIKit
 
 public class MultiPolygonRenderer: MKOverlayPathRenderer {
 
@@ -18,12 +18,25 @@ public class MultiPolygonRenderer: MKOverlayPathRenderer {
 	 Creates a new renderer that can render a `MultiPolygonOverlay`.
 
 	 - parameter multiPolygonOverlay:   `MultiPolygonOverlay` to be rendered.
+     - parameter fillColor:             Color to be used to fill polygon.
+     - parameter strokeColor:           Color to be used to stroke polygon.
+     - parameter selectedFillColor:     Color to be used to fill polygon when 
+     selected.
+     - parameter selectedStrokeColor:   Color to be used to stroke polygon when
+     selected.
 	 - parameter useSimplifiedGeometry: Whether simplified geometry should be
 	 used (`true`) or real, complex one (`false`).
 
 	 - returns: Renderer that can render given multi polygon overlay.
 	 */
-	public init(multiPolygonOverlay: MultiPolygonOverlay, useSimplifiedGeometry: Bool = false) {
+	public init(
+		multiPolygonOverlay: MultiPolygonOverlay,
+		fillColor: UIColor,
+		strokeColor: UIColor,
+		selectedFillColor: UIColor,
+		selectedStrokeColor: UIColor,
+		useSimplifiedGeometry: Bool = false
+	) {
 
 		if useSimplifiedGeometry {
 			self.polygons = [multiPolygonOverlay.simplifiedPolygon]
@@ -35,11 +48,11 @@ public class MultiPolygonRenderer: MKOverlayPathRenderer {
 
 		// TODO: Move this display settings to a proxy object so they can be easily changed or themed
 		if multiPolygonOverlay.selected {
-			self.fillColor = UIColor.yellowColor()
-			self.strokeColor = UIColor.blueColor()
+			self.fillColor = selectedFillColor
+			self.strokeColor = selectedStrokeColor
 		} else {
-			self.fillColor = UIColor.redColor()
-			self.strokeColor = UIColor.greenColor()
+			self.fillColor = fillColor
+			self.strokeColor = strokeColor
 		}
 
 		self.lineWidth = 5.0
