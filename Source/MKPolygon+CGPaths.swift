@@ -48,7 +48,15 @@ extension MKPolygon {
 
 		if let interiorPolygons = self.interiorPolygons {
 			for interiorPolygon in interiorPolygons {
-				CGPathAddPath(path, nil, interiorPolygon.polyPathForOverlayPathRenderer(renderer))
+                let pathToAdd: CGPath
+                #if swift(>=3.0)
+                    pathToAdd = interiorPolygon
+                        .polyPathForOverlayPathRenderer(renderer)
+                #else
+                    pathToAdd = interiorPolygon
+                        .polyPathForOverlayPathRenderer(renderer)!
+                #endif
+                CGPathAddPath(path, nil, pathToAdd)
 			}
 		}
 
