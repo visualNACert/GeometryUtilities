@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "GeometryUtilities"
-  s.version      = "0.0.3"
+  s.version      = "0.0.4"
   s.summary      = "A collection of utilities to handle geometry in WKT format"
 
   # This description is used to generate tags and improve search results.
