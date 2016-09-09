@@ -16,7 +16,7 @@
  *  Data structure encapsulating minimum and maximum longitude and latitude.
  */
 typedef struct {
-  double minLon, minLat, maxLon, maxLat;
+  double minLon, minLat, maxLon, maxLat, centroidLon, centroidLat;
   int pointCount;
 } MinMaxLonLat;
 

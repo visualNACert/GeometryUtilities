@@ -18,6 +18,8 @@ extension MKCoordinateRegion {
 				minLat: self.center.latitude - self.span.latitudeDelta / 2,
 				maxLon: self.center.longitude + self.span.longitudeDelta / 2,
 				maxLat: self.center.latitude + self.span.latitudeDelta / 2,
+				centroidLon: self.center.longitude,
+				centroidLat: self.center.latitude,
 				pointCount: 4
 			)
 		}

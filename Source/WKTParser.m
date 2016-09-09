@@ -101,16 +101,28 @@ MinMaxLonLat parseWKT(NSString *wkt) {
                      options:NSMatchingWithoutAnchoringBounds
                        range:NSMakeRange(0, wkt.length)];
 
+  mmll.centroidLon = 0;
+  mmll.centroidLat = 0;
+
   bool isLongitude = true;
   for (NSTextCheckingResult *res in matches) {
     double number = [wkt substringWithRange:res.range].doubleValue;
     if (isLongitude) {
+      mmll.centroidLon += number;
       keepLongitude(&mmll, number);
     } else {
+      mmll.centroidLat += number;
       keepLatitude(&mmll, number);
     }
     mmll.pointCount++;
     isLongitude = !isLongitude;
+  }
+
+  mmll.pointCount /= 2;
+
+  if (mmll.pointCount > 0) {
+    mmll.centroidLon /= mmll.pointCount;
+    mmll.centroidLat /= mmll.pointCount;
   }
 
   return mmll;
