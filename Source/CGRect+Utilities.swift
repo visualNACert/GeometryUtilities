@@ -9,24 +9,48 @@
 import Foundation
 import CoreGraphics
 
+#if swift(>=3.0)
+@available(*, introduced: 0.0.8)
+extension CGRect {
+    /**
+     Creates a new rect with given center and size.
+     
+     - parameter center: Center of the rectangle.
+     - parameter size: Size of the rectangle.
+     
+     - returns: Properly initialized instance.
+     */
+    public init(center: CGPoint, size: CGSize) {
+        self.init(
+            origin: CGPoint(
+                x: center.x - size.width / 2,
+                y: center.y - size.height / 2
+            ),
+            size: size
+        )
+    }
+}
 /**
  Returns a new rect centered at given point with given span.
-
+ 
  - parameter center: Center of the rectangle.
  - parameter span:   Size of the rectangle.
-
+ 
  - returns: Rectangle with given size centered at given point.
  */
-#if swift(>=3)
+@available(*, deprecated: 0.0.8, renamed: "CGRect(center:size:)")
 public func CGRectMake(center: CGPoint, span: CGSize) -> CGRect {
-	return CGRect(
-		x: center.x - span.width / 2,
-		y: center.y - span.height / 2,
-		width: span.width,
-		height: span.height
-	)
+	return CGRect(center: center, size: span )
 }
 #else
+/**
+ Returns a new rect centered at given point with given span.
+ 
+ - parameter center: Center of the rectangle.
+ - parameter span:   Size of the rectangle.
+ 
+ - returns: Rectangle with given size centered at given point.
+ */
 public func CGRectMake(center center: CGPoint, span: CGSize) -> CGRect {
     return CGRectMake(
         center.x - span.width / 2,
@@ -42,7 +66,7 @@ extension CGRect {
 	/// Point located at minimum X and Y values of this rect.
 	public var minPoint: CGPoint {
 		get {
-            #if swift(>=3)
+            #if swift(>=3.0)
 			return CGPoint(x: self.minX, y: self.minY)
             #else
             return CGPointMake(CGRectGetMinX(self), CGRectGetMinY(self))
@@ -53,7 +77,7 @@ extension CGRect {
 	/// Point located at maximum X and Y values of this rect.
 	public var maxPoint: CGPoint {
 		get {
-            #if swift(>=3)
+            #if swift(>=3.0)
 			return CGPoint(x: self.maxX, y: self.maxY)
             #else
             return CGPointMake(CGRectGetMaxX(self), CGRectGetMaxY(self))

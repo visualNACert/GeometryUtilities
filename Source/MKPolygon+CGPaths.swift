@@ -18,9 +18,10 @@ extension MKOverlayPathRenderer {
 	 - returns: Path equivalent to given polygon in this renderer.
 	 */
     #if swift(>=3.0)
-	public func polyPathForPolygon(_ polygon: MKPolygon) -> CGPath? {
-		return polygon.polyPathForOverlayPathRenderer(self)
-	}
+    @available(*, introduced: 0.0.8)
+    public func polyPath(forPolygon polygon: MKPolygon) -> CGPath? {
+        return polygon.polyPath(forOverlayPathRenderer: self)
+    }
     #else
     public func polyPathForPolygon(polygon: MKPolygon) -> CGPath? {
         return polygon.polyPathForOverlayPathRenderer(self)
@@ -42,8 +43,8 @@ extension MKPolygon {
 	 - returns: Path equivalent to this polygon in given renderer.
 	 */
     #if swift(>=3)
-	public func polyPathForOverlayPathRenderer(
-		_ renderer: MKOverlayPathRenderer
+	public func polyPath(
+        forOverlayPathRenderer renderer: MKOverlayPathRenderer
 	) -> CGPath? {
 
 		let points = self.points()
@@ -55,8 +56,9 @@ extension MKPolygon {
 
 		if let interiorPolygons = self.interiorPolygons {
 			for interiorPolygon in interiorPolygons {
-                let pathToAdd = interiorPolygon
-                    .polyPathForOverlayPathRenderer(renderer)!
+                let pathToAdd = interiorPolygon.polyPath(
+                    forOverlayPathRenderer: renderer
+                )!
                 path.addPath(pathToAdd)
 			}
 		}

@@ -22,6 +22,7 @@ public struct GeometryUtilities {
 
 	 - returns: Minimum and maximum longitude and latitude.
 	 */
+    @available(*, deprecated: 0.0.8, message: "Use `MultiPolygon` struct")
 	public static func minimumAndMaximumLongitudeAndLatitudeInWKTGeometry(
 		_ wkt: String
 	) -> (
@@ -52,6 +53,7 @@ public struct GeometryUtilities {
      
      - returns: Minimum and maximum longitude and latitude.
      */
+    @available(*, deprecated=0.0.8, message="Use `MultiPolygon` struct")
     public static func minimumAndMaximumLongitudeAndLatitudeInWKTGeometry(
         wkt: String
     ) -> (

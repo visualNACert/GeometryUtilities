@@ -19,23 +19,23 @@ extension MKTileOverlayPath {
 
 	fileprivate func bboxWGS84YOf(row: Int, zoom: Int) -> Double {
 		let n = M_PI - 2.0 * M_PI * Double(row) / pow(2.0, Double(zoom))
-		return 180.0 / M_PI * atan(0.5 * (exp(n) - exp(-n)));
+		return 180.0 / M_PI * atan(0.5 * (exp(n) - exp(-n)))
 	}
 
 	fileprivate func mercatorXOf(longitude: Double) -> Double {
-		return longitude * 20037508.34 / 180;
+		return longitude * 20037508.34 / 180
 	}
 
 	fileprivate func mercatorYOf(latitude: Double) -> Double {
-		return log(tan((90 + latitude) * M_PI / 360)) / (M_PI / 180) * 20037508.34 / 180;
+		return log(tan((90 + latitude) * M_PI / 360)) / (M_PI / 180) * 20037508.34 / 180
 	}
 
 	fileprivate var bboxWGS84Components: (Double, Double, Double, Double) {
 		get {
-			let left = bboxWGS84XOf(column: self.x, zoom: self.z); // minX
-			let right = bboxWGS84XOf(column: self.x + 1, zoom: self.z); // maxX
-			let bottom = bboxWGS84YOf(row: self.y + 1, zoom: self.z); // minY
-			let top = bboxWGS84YOf(row: self.y, zoom: self.z); // maxY
+			let left = bboxWGS84XOf(column: self.x, zoom: self.z)      // minX
+			let right = bboxWGS84XOf(column: self.x + 1, zoom: self.z) // maxX
+			let bottom = bboxWGS84YOf(row: self.y + 1, zoom: self.z)   // minY
+			let top = bboxWGS84YOf(row: self.y, zoom: self.z)          // maxY
 			return (left, right, bottom, top)
 		}
 	}
@@ -68,6 +68,7 @@ extension MKTileOverlayPath {
     }
     #endif
 
+    /// Bounding box of this overlay path using WGS84 coordinate system.
 	public var bboxWGS84: String {
 		get {
 			let (left, right, bottom, top) = self.bboxWGS84Components
@@ -101,6 +102,7 @@ extension MKTileOverlayPath {
     }
     #endif
 
+    /// Bounding box of this overlay path using Mercator projection.
 	public var bboxMercator: String {
 		get {
 			let (left, right, bottom, top) = self.bboxMercatorComponents

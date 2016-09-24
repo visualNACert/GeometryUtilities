@@ -11,7 +11,7 @@ import MapKit
 /// Location coordinates for point at latitude and longitude 0.
 public let CLLocationCoordinate2DZero = CLLocationCoordinate2DMake(0, 0)
 
-#if swift(>=3)
+#if swift(>=3.0)
 public func abs(_ value: CLLocationCoordinate2D) -> CLLocationCoordinate2D {
 	return CLLocationCoordinate2DMake(abs(value.latitude), abs(value.longitude))
 }
@@ -66,7 +66,7 @@ public func / (
 	)
 }
 
-#if swift(>=3)
+#if swift(>=3.0)
 extension Collection where Iterator.Element == CLLocationCoordinate2D, Self.IndexDistance == Int {
 
 	/**
