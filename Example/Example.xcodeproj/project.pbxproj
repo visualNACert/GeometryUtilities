@@ -1,0 +1,535 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		13DB08571D96D0A600C14018 /* CGRect+Utilities.test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DB08561D96D0A600C14018 /* CGRect+Utilities.test.swift */; };
+		13DB08581D96D0A600C14018 /* CGRect+Utilities.test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DB08561D96D0A600C14018 /* CGRect+Utilities.test.swift */; };
+		1723EAE9BED36844304ABB0F /* Pods_GeometryUtilities_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 043E17FCF32BC372565A8C75 /* Pods_GeometryUtilities_macOS.framework */; };
+		2A7F51C9A8B0942ABD8F3441 /* Pods_GeometryUtilities_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA7DAFD38373A823DA19267B /* Pods_GeometryUtilities_iOS.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		043E17FCF32BC372565A8C75 /* Pods_GeometryUtilities_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeometryUtilities_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		13DB083E1D96CFE400C14018 /* GeometryUtilities-iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GeometryUtilities-iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		13DB084B1D96CFF400C14018 /* GeometryUtilities-macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GeometryUtilities-macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		13DB08561D96D0A600C14018 /* CGRect+Utilities.test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CGRect+Utilities.test.swift"; path = "../Test/CGRect+Utilities.test.swift"; sourceTree = "<group>"; };
+		1B6D9232B0AD11C3AFA5FCD7 /* Pods-GeometryUtilities-macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeometryUtilities-macOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GeometryUtilities-macOS/Pods-GeometryUtilities-macOS.debug.xcconfig"; sourceTree = "<group>"; };
+		31F0622D2947C629E6F009CB /* Pods-GeometryUtilities-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeometryUtilities-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-GeometryUtilities-iOS/Pods-GeometryUtilities-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		6EDA3AE6DD9573F0B0695C46 /* Pods-GeometryUtilities-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeometryUtilities-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GeometryUtilities-iOS/Pods-GeometryUtilities-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		BBDD4A73B7B9CCFB959EC960 /* Pods-GeometryUtilities-macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeometryUtilities-macOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-GeometryUtilities-macOS/Pods-GeometryUtilities-macOS.release.xcconfig"; sourceTree = "<group>"; };
+		FA7DAFD38373A823DA19267B /* Pods_GeometryUtilities_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeometryUtilities_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		13DB083B1D96CFE400C14018 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A7F51C9A8B0942ABD8F3441 /* Pods_GeometryUtilities_iOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13DB08481D96CFF400C14018 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1723EAE9BED36844304ABB0F /* Pods_GeometryUtilities_macOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		13DB08331D96CFD700C14018 = {
+			isa = PBXGroup;
+			children = (
+				13DB08591D96D0A900C14018 /* Test */,
+				13DB083F1D96CFE400C14018 /* Products */,
+				A6B4229A270A44113EA2AAA5 /* Pods */,
+				9A1435F5DBABA1135ED95548 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		13DB083F1D96CFE400C14018 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				13DB083E1D96CFE400C14018 /* GeometryUtilities-iOS.xctest */,
+				13DB084B1D96CFF400C14018 /* GeometryUtilities-macOS.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		13DB08591D96D0A900C14018 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				13DB08561D96D0A600C14018 /* CGRect+Utilities.test.swift */,
+			);
+			name = Test;
+			sourceTree = "<group>";
+		};
+		9A1435F5DBABA1135ED95548 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FA7DAFD38373A823DA19267B /* Pods_GeometryUtilities_iOS.framework */,
+				043E17FCF32BC372565A8C75 /* Pods_GeometryUtilities_macOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A6B4229A270A44113EA2AAA5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6EDA3AE6DD9573F0B0695C46 /* Pods-GeometryUtilities-iOS.debug.xcconfig */,
+				31F0622D2947C629E6F009CB /* Pods-GeometryUtilities-iOS.release.xcconfig */,
+				1B6D9232B0AD11C3AFA5FCD7 /* Pods-GeometryUtilities-macOS.debug.xcconfig */,
+				BBDD4A73B7B9CCFB959EC960 /* Pods-GeometryUtilities-macOS.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		13DB083D1D96CFE400C14018 /* GeometryUtilities-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 13DB08441D96CFE400C14018 /* Build configuration list for PBXNativeTarget "GeometryUtilities-iOS" */;
+			buildPhases = (
+				535C32B9100E57FAC2CF9E45 /* [CP] Check Pods Manifest.lock */,
+				13DB083A1D96CFE400C14018 /* Sources */,
+				13DB083B1D96CFE400C14018 /* Frameworks */,
+				13DB083C1D96CFE400C14018 /* Resources */,
+				4CA4EA5D88AAC7AFA7BA8498 /* [CP] Embed Pods Frameworks */,
+				ACB54015354239CD07640BF9 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "GeometryUtilities-iOS";
+			productName = "GeometryUtilities-iOS";
+			productReference = 13DB083E1D96CFE400C14018 /* GeometryUtilities-iOS.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		13DB084A1D96CFF400C14018 /* GeometryUtilities-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 13DB08501D96CFF400C14018 /* Build configuration list for PBXNativeTarget "GeometryUtilities-macOS" */;
+			buildPhases = (
+				6E09D22D38FCA941CBBAF93A /* [CP] Check Pods Manifest.lock */,
+				13DB08471D96CFF400C14018 /* Sources */,
+				13DB08481D96CFF400C14018 /* Frameworks */,
+				13DB08491D96CFF400C14018 /* Resources */,
+				1FAC1FDCEEBAF362D2BFA3B2 /* [CP] Embed Pods Frameworks */,
+				FF6878796AA39AA903E1B5DB /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "GeometryUtilities-macOS";
+			productName = "GeometryUtilities-macOS";
+			productReference = 13DB084B1D96CFF400C14018 /* GeometryUtilities-macOS.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		13DB08341D96CFD700C14018 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				TargetAttributes = {
+					13DB083D1D96CFE400C14018 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					13DB084A1D96CFF400C14018 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 13DB08371D96CFD700C14018 /* Build configuration list for PBXProject "Example" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 13DB08331D96CFD700C14018;
+			productRefGroup = 13DB083F1D96CFE400C14018 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				13DB083D1D96CFE400C14018 /* GeometryUtilities-iOS */,
+				13DB084A1D96CFF400C14018 /* GeometryUtilities-macOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		13DB083C1D96CFE400C14018 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13DB08491D96CFF400C14018 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1FAC1FDCEEBAF362D2BFA3B2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GeometryUtilities-macOS/Pods-GeometryUtilities-macOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4CA4EA5D88AAC7AFA7BA8498 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GeometryUtilities-iOS/Pods-GeometryUtilities-iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		535C32B9100E57FAC2CF9E45 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6E09D22D38FCA941CBBAF93A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		ACB54015354239CD07640BF9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GeometryUtilities-iOS/Pods-GeometryUtilities-iOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF6878796AA39AA903E1B5DB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GeometryUtilities-macOS/Pods-GeometryUtilities-macOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		13DB083A1D96CFE400C14018 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13DB08571D96D0A600C14018 /* CGRect+Utilities.test.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13DB08471D96CFF400C14018 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13DB08581D96D0A600C14018 /* CGRect+Utilities.test.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		13DB08381D96CFD700C14018 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		13DB08391D96CFD700C14018 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		13DB08451D96CFE400C14018 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6EDA3AE6DD9573F0B0695C46 /* Pods-GeometryUtilities-iOS.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = ../Test/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "is.llu.bravo.GeometryUtilities-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		13DB08461D96CFE400C14018 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 31F0622D2947C629E6F009CB /* Pods-GeometryUtilities-iOS.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = ../Test/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "is.llu.bravo.GeometryUtilities-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		13DB08511D96CFF400C14018 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B6D9232B0AD11C3AFA5FCD7 /* Pods-GeometryUtilities-macOS.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = ../Test/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "is.llu.bravo.GeometryUtilities-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		13DB08521D96CFF400C14018 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BBDD4A73B7B9CCFB959EC960 /* Pods-GeometryUtilities-macOS.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = ../Test/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "is.llu.bravo.GeometryUtilities-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		13DB08371D96CFD700C14018 /* Build configuration list for PBXProject "Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13DB08381D96CFD700C14018 /* Debug */,
+				13DB08391D96CFD700C14018 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		13DB08441D96CFE400C14018 /* Build configuration list for PBXNativeTarget "GeometryUtilities-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13DB08451D96CFE400C14018 /* Debug */,
+				13DB08461D96CFE400C14018 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		13DB08501D96CFF400C14018 /* Build configuration list for PBXNativeTarget "GeometryUtilities-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13DB08511D96CFF400C14018 /* Debug */,
+				13DB08521D96CFF400C14018 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 13DB08341D96CFD700C14018 /* Project object */;
+}

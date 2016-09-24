@@ -1,0 +1,21 @@
+source 'git@bitbucket.org:vnac/podsrepo.git'
+
+target 'GeometryUtilities-iOS' do
+
+	platform :ios, '8.0'
+
+	use_frameworks!
+
+	pod 'GeometryUtilities', :path => '../'
+
+end
+
+target 'GeometryUtilities-macOS' do
+
+	platform :osx, '10.10'
+
+	use_frameworks!
+
+	pod 'GeometryUtilities', :path => '../'
+
+end
