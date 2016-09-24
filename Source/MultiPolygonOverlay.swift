@@ -1,6 +1,6 @@
 //
 //  MultiPolygonOverlay.swift
-//  Visual
+//  GeometryUtilities
 //
 //  Created by Lluís Ulzurrun on 20/7/16.
 //  Copyright © 2016 VisualNACert. All rights reserved.

@@ -1,6 +1,6 @@
 //
 //  MultiPolygonRenderer.swift
-//  Visual
+//  GeometryUtilities
 //
 //  Created by Lluís Ulzurrun on 20/7/16.
 //  Copyright © 2016 VisualNACert. All rights reserved.
@@ -63,7 +63,11 @@ public class MultiPolygonRenderer: MKOverlayPathRenderer {
 		super.init(overlay: overlay)
 	}
 
-	public override func drawMapRect(mapRect: MKMapRect, zoomScale: MKZoomScale, inContext context: CGContext) {
+	public override func drawMapRect(
+        mapRect: MKMapRect,
+        zoomScale: MKZoomScale,
+        inContext context: CGContext
+    ) {
 		// Taken from: http://stackoverflow.com/a/17673411
 
 		for polygon in self.polygons {
@@ -85,12 +89,13 @@ public class MultiPolygonRenderer: MKOverlayPathRenderer {
 	/**
 	 Returns whether given point is found inside this renderer's polygons or not.
 
+     - note: [Source](http://stackoverflow.com/a/15235844)
+     
 	 - parameter point: Map point to look for.
 
 	 - returns: `true` if point is contained in this renderer`s polygons.
 	 */
 	public func containsPoint(point: MKMapPoint) -> Bool {
-		// Taken from: http://stackoverflow.com/a/15235844
 
 		let polygonViewPoint = self.pointForMapPoint(point)
 		for polygon in self.polygons {

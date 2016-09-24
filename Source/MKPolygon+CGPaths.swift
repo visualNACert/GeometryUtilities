@@ -1,6 +1,6 @@
 //
 //  MKPolygon+CGPaths.swift
-//  Visual
+//  GeometryUtilities
 //
 //  Created by Lluís Ulzurrun on 20/7/16.
 //  Copyright © 2016 VisualNACert. All rights reserved.
@@ -27,6 +27,8 @@ extension MKPolygon {
 
 	/**
 	 Returns a `CGPathRef` equivalent to this polygon in given renderer.
+     
+     - note: [Source](http://stackoverflow.com/a/17673411).
 
 	 - parameter renderer: Renderer defining coordinate system where returned
 	 path will be drawn.
@@ -36,8 +38,6 @@ extension MKPolygon {
 	public func polyPathForOverlayPathRenderer(
 		renderer: MKOverlayPathRenderer
 	) -> CGPathRef? {
-
-		// Taken from: http://stackoverflow.com/a/17673411
 
 		let points = self.points()
 		let pointsCount = self.pointCount

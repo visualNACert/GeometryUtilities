@@ -1,6 +1,6 @@
 //
 //  WKTParser.m
-//  Visual
+//  GeometryUtilities
 //
 //  Created by Lluís Ulzurrun on 12/7/16.
 //  Copyright © 2016 VisualNACert. All rights reserved.

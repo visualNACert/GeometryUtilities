@@ -1,6 +1,6 @@
 //
 //  CLLocationCoordinate2D+BasicOperators.swift
-//  Visual
+//  GeometryUtilities
 //
 //  Created by Lluís Ulzurrun on 19/7/16.
 //  Copyright © 2016 VisualNACert. All rights reserved.
@@ -15,6 +15,8 @@ public func abs(value: CLLocationCoordinate2D) -> CLLocationCoordinate2D {
 	return CLLocationCoordinate2DMake(abs(value.latitude), abs(value.longitude))
 }
 
+/// Adds two coordinates, returning the coordinate resulting of adding each 
+/// component independently.
 public func + (
 	left: CLLocationCoordinate2D,
 	right: CLLocationCoordinate2D
@@ -25,6 +27,8 @@ public func + (
 	)
 }
 
+/// Subtracts two coordinates, returning the coordinate resulting of subtracting 
+/// each component independently.
 public func - (
 	left: CLLocationCoordinate2D,
 	right: CLLocationCoordinate2D
@@ -35,6 +39,8 @@ public func - (
 	)
 }
 
+/// Returns the coordinate resulting of dividing each component by given numeric
+/// value as a floating point number.
 public func / (
 	left: CLLocationCoordinate2D,
 	right: Int
@@ -42,6 +48,8 @@ public func / (
 	return left / Double(right)
 }
 
+/// Returns the coordinate resulting of dividing each component by given 
+/// floating point number.
 public func / (
 	left: CLLocationCoordinate2D,
 	right: Double
@@ -52,7 +60,7 @@ public func / (
 	)
 }
 
-extension _ArrayType where Generator.Element == CLLocationCoordinate2D {
+extension CollectionType where Generator.Element == CLLocationCoordinate2D, Self.Index == Int {
 
 	/**
 	 Returns centroid of polygon with this list of coordinates.

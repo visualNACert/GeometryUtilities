@@ -1,6 +1,6 @@
 //
 //  CGRect+Utilities.swift
-//  Visual
+//  GeometryUtilities
 //
 //  Created by Lluís Ulzurrun on 21/7/16.
 //  Copyright © 2016 VisualNACert. All rights reserved.

@@ -1,6 +1,6 @@
 //
 //  MKTileOverlayPath+ProjectionUtils.swift
-//  Visual
+//  GeometryUtilities
 //
 //  Created by Lluís Ulzurrun on 5/7/16.
 //  Copyright © 2016 VisualNACert. All rights reserved.
@@ -66,4 +66,3 @@ extension MKTileOverlayPath {
 	}
 
 }
-
