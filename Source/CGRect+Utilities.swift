@@ -9,8 +9,6 @@
 import Foundation
 import CoreGraphics
 
-#if swift(>=3.0)
-@available(*, introduced: 0.0.8)
 extension CGRect {
     /**
      Creates a new rect with given center and size.
@@ -20,6 +18,7 @@ extension CGRect {
      
      - returns: Properly initialized instance.
      */
+    @available(*, introduced: 0.0.8)
     public init(center: CGPoint, size: CGSize) {
         self.init(
             origin: CGPoint(
@@ -30,36 +29,6 @@ extension CGRect {
         )
     }
 }
-/**
- Returns a new rect centered at given point with given span.
- 
- - parameter center: Center of the rectangle.
- - parameter span:   Size of the rectangle.
- 
- - returns: Rectangle with given size centered at given point.
- */
-@available(*, deprecated: 0.0.8, renamed: "CGRect(center:size:)")
-public func CGRectMake(center: CGPoint, span: CGSize) -> CGRect {
-	return CGRect(center: center, size: span )
-}
-#else
-/**
- Returns a new rect centered at given point with given span.
- 
- - parameter center: Center of the rectangle.
- - parameter span:   Size of the rectangle.
- 
- - returns: Rectangle with given size centered at given point.
- */
-public func CGRectMake(center center: CGPoint, span: CGSize) -> CGRect {
-    return CGRectMake(
-        center.x - span.width / 2,
-        center.y - span.height / 2,
-        span.width,
-        span.height
-    )
-}
-#endif
 
 extension CGRect {
 

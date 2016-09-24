@@ -9,17 +9,14 @@
 import MapKit
 
 /// Location coordinates for point at latitude and longitude 0.
-public let CLLocationCoordinate2DZero = CLLocationCoordinate2DMake(0, 0)
+public let CLLocationCoordinate2DZero = CLLocationCoordinate2D(latitude: 0, longitude: 0)
 
-#if swift(>=3.0)
 public func abs(_ value: CLLocationCoordinate2D) -> CLLocationCoordinate2D {
-	return CLLocationCoordinate2DMake(abs(value.latitude), abs(value.longitude))
+	return CLLocationCoordinate2D(
+        latitude: abs(value.latitude),
+        longitude: abs(value.longitude)
+    )
 }
-#else
-public func abs(value: CLLocationCoordinate2D) -> CLLocationCoordinate2D {
-    return CLLocationCoordinate2DMake(abs(value.latitude), abs(value.longitude))
-}
-#endif
 
 /// Adds two coordinates, returning the coordinate resulting of adding each 
 /// component independently.
@@ -27,9 +24,9 @@ public func + (
 	left: CLLocationCoordinate2D,
 	right: CLLocationCoordinate2D
 ) -> CLLocationCoordinate2D {
-	return CLLocationCoordinate2DMake(
-		left.latitude + right.latitude,
-		left.longitude + right.longitude
+	return CLLocationCoordinate2D(
+        latitude: left.latitude + right.latitude,
+        longitude: left.longitude + right.longitude
 	)
 }
 
@@ -39,9 +36,9 @@ public func - (
 	left: CLLocationCoordinate2D,
 	right: CLLocationCoordinate2D
 ) -> CLLocationCoordinate2D {
-	return CLLocationCoordinate2DMake(
-		left.latitude - right.latitude,
-		left.longitude - right.longitude
+	return CLLocationCoordinate2D(
+        latitude: left.latitude - right.latitude,
+        longitude: left.longitude - right.longitude
 	)
 }
 
@@ -60,14 +57,14 @@ public func / (
 	left: CLLocationCoordinate2D,
 	right: Double
 ) -> CLLocationCoordinate2D {
-	return CLLocationCoordinate2DMake(
-		left.latitude / right,
-		left.longitude / right
+	return CLLocationCoordinate2D(
+        latitude: left.latitude / right,
+        longitude: left.longitude / right
 	)
 }
 
-#if swift(>=3.0)
-extension Collection where Iterator.Element == CLLocationCoordinate2D, Self.IndexDistance == Int {
+extension Collection
+where Iterator.Element == CLLocationCoordinate2D, Self.IndexDistance == Int {
 
 	/**
 	 Returns centroid of polygon with this list of coordinates.
@@ -80,18 +77,3 @@ extension Collection where Iterator.Element == CLLocationCoordinate2D, Self.Inde
 	}
 
 }
-#else
-extension CollectionType where Generator.Element == CLLocationCoordinate2D, Self.Index == Int {
-    
-    /**
-     Returns centroid of polygon with this list of coordinates.
-     
-     - returns: Centroid of polygon formed by this list of coordinates.
-     */
-    public func centroid() -> CLLocationCoordinate2D {
-        guard self.count > 0 else { return kCLLocationCoordinate2DInvalid }
-        return self.reduce(CLLocationCoordinate2DZero) { $0 + $1 } / self.count
-    }
-    
-}
-#endif

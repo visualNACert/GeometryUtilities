@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "GeometryUtilities"
-  s.version      = "0.0.8"
+  s.version      = "1.0.0"
   s.summary      = "A collection of utilities to handle geometry in WKT format"
 
   s.description  = <<-DESC
@@ -24,6 +24,6 @@ Pod::Spec.new do |s|
   s.ios.source_files = 'Source/{iOS}/**/*', 'Source/*.{h,m,swift}'
   s.osx.source_files = 'Source/{macOS}/**/*', 'Source/*.{h,m,swift}'
 
-  s.dependency 'StringUtilities', '~> 0.0.5'
+  s.dependency 'StringUtilities', '~> 1.0'
 
 end

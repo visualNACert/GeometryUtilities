@@ -1,4 +1,4 @@
-[![Build Status](https://www.bitrise.io/app/ddd1a998fb0dec4f.svg?token=rOVw5_IGa6Nv4G0EyvkTOQ&branch=swift-2)](https://www.bitrise.io/app/ddd1a998fb0dec4f) ![platform iOS](https://img.shields.io/badge/platform-iOS-blue.svg) ![platform macOS](https://img.shields.io/badge/platform-macOS-blue.svg) ![swift2 compatible 0.0.8](https://img.shields.io/badge/swift2-0.0.8-brightgreen.svg) ![swift3 compatible](https://img.shields.io/badge/swift3-compatible-brightgreen.svg) ![pod 0.0.8](https://img.shields.io/badge/pod-0.0.8-blue.svg)
+[![Build Status](https://www.bitrise.io/app/ddd1a998fb0dec4f.svg?token=rOVw5_IGa6Nv4G0EyvkTOQ&branch=master)](https://www.bitrise.io/app/ddd1a998fb0dec4f) ![platform iOS](https://img.shields.io/badge/platform-iOS-blue.svg) ![platform macOS](https://img.shields.io/badge/platform-macOS-blue.svg) ![swift2 compatible 0.0.8](https://img.shields.io/badge/swift2-0.0.8-brightgreen.svg) ![swift3 compatible](https://img.shields.io/badge/swift3-compatible-brightgreen.svg) ![pod 1.0.0](https://img.shields.io/badge/pod-1.0.0-blue.svg)
 
 # Geometry Utilities
 
