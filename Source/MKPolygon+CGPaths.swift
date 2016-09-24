@@ -17,9 +17,15 @@ extension MKOverlayPathRenderer {
 
 	 - returns: Path equivalent to given polygon in this renderer.
 	 */
-	public func polyPathForPolygon(polygon: MKPolygon) -> CGPathRef? {
+    #if swift(>=3.0)
+	public func polyPathForPolygon(_ polygon: MKPolygon) -> CGPath? {
 		return polygon.polyPathForOverlayPathRenderer(self)
 	}
+    #else
+    public func polyPathForPolygon(polygon: MKPolygon) -> CGPath? {
+        return polygon.polyPathForOverlayPathRenderer(self)
+    }
+    #endif
 
 }
 
@@ -35,40 +41,66 @@ extension MKPolygon {
 
 	 - returns: Path equivalent to this polygon in given renderer.
 	 */
+    #if swift(>=3)
 	public func polyPathForOverlayPathRenderer(
-		renderer: MKOverlayPathRenderer
-	) -> CGPathRef? {
+		_ renderer: MKOverlayPathRenderer
+	) -> CGPath? {
 
 		let points = self.points()
 		let pointsCount = self.pointCount
 
 		guard pointCount >= 3 else { return nil }
 
-		let path = CGPathCreateMutable()
+		let path = CGMutablePath()
 
 		if let interiorPolygons = self.interiorPolygons {
 			for interiorPolygon in interiorPolygons {
-                let pathToAdd: CGPath
-                #if swift(>=3.0)
-                    pathToAdd = interiorPolygon
-                        .polyPathForOverlayPathRenderer(renderer)
-                #else
-                    pathToAdd = interiorPolygon
-                        .polyPathForOverlayPathRenderer(renderer)!
-                #endif
-                CGPathAddPath(path, nil, pathToAdd)
+                let pathToAdd = interiorPolygon
+                    .polyPathForOverlayPathRenderer(renderer)!
+                path.addPath(pathToAdd)
 			}
 		}
 
-		let relativePoint = renderer.pointForMapPoint(points[0])
-		CGPathMoveToPoint(path, nil, relativePoint.x, relativePoint.y)
+		let relativePoint = renderer.point(for: points[0])
+        path.move(to: relativePoint)
 		for i in 1..<pointsCount {
-			let nextPoint = renderer.pointForMapPoint(points[i])
-			CGPathAddLineToPoint(path, nil, nextPoint.x, nextPoint.y)
+			let nextPoint = renderer.point(for: points[i])
+            path.addLine(to: nextPoint)
 		}
 
 		return path
 
 	}
+    #else
+    public func polyPathForOverlayPathRenderer(
+        _ renderer: MKOverlayPathRenderer
+    ) -> CGPath? {
+        
+        let points = self.points()
+        let pointsCount = self.pointCount
+        
+        guard pointCount >= 3 else { return nil }
+        
+        let path = CGPathCreateMutable()
+        
+        if let interiorPolygons = self.interiorPolygons {
+            for interiorPolygon in interiorPolygons {
+                let pathToAdd = interiorPolygon
+                    .polyPathForOverlayPathRenderer(renderer)!
+                CGPathAddPath(path, nil, pathToAdd)
+            }
+        }
+        
+        let relativePoint = renderer.pointForMapPoint(points[0])
+        CGPathMoveToPoint(path, nil, relativePoint.x, relativePoint.y)
+        for i in 1..<pointsCount {
+            let nextPoint = renderer.pointForMapPoint(points[i])
+            CGPathAddLineToPoint(path, nil, nextPoint.x, nextPoint.y)
+        }
+        
+        return path
+        
+    }
+    #endif
 
 }

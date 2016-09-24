@@ -11,9 +11,15 @@ import MapKit
 /// Location coordinates for point at latitude and longitude 0.
 public let CLLocationCoordinate2DZero = CLLocationCoordinate2DMake(0, 0)
 
-public func abs(value: CLLocationCoordinate2D) -> CLLocationCoordinate2D {
+#if swift(>=3)
+public func abs(_ value: CLLocationCoordinate2D) -> CLLocationCoordinate2D {
 	return CLLocationCoordinate2DMake(abs(value.latitude), abs(value.longitude))
 }
+#else
+public func abs(value: CLLocationCoordinate2D) -> CLLocationCoordinate2D {
+    return CLLocationCoordinate2DMake(abs(value.latitude), abs(value.longitude))
+}
+#endif
 
 /// Adds two coordinates, returning the coordinate resulting of adding each 
 /// component independently.
@@ -60,7 +66,8 @@ public func / (
 	)
 }
 
-extension CollectionType where Generator.Element == CLLocationCoordinate2D, Self.Index == Int {
+#if swift(>=3)
+extension Collection where Iterator.Element == CLLocationCoordinate2D, Self.IndexDistance == Int {
 
 	/**
 	 Returns centroid of polygon with this list of coordinates.
@@ -73,3 +80,18 @@ extension CollectionType where Generator.Element == CLLocationCoordinate2D, Self
 	}
 
 }
+#else
+extension CollectionType where Generator.Element == CLLocationCoordinate2D, Self.Index == Int {
+    
+    /**
+     Returns centroid of polygon with this list of coordinates.
+     
+     - returns: Centroid of polygon formed by this list of coordinates.
+     */
+    public func centroid() -> CLLocationCoordinate2D {
+        guard self.count > 0 else { return kCLLocationCoordinate2DInvalid }
+        return self.reduce(CLLocationCoordinate2DZero) { $0 + $1 } / self.count
+    }
+    
+}
+#endif
