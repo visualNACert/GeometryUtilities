@@ -42,7 +42,7 @@ extension MKPolygon {
 
 	 - returns: Path equivalent to this polygon in given renderer.
 	 */
-    #if swift(>=3)
+    #if swift(>=3.0)
 	public func polyPath(
         forOverlayPathRenderer renderer: MKOverlayPathRenderer
 	) -> CGPath? {
@@ -75,7 +75,7 @@ extension MKPolygon {
 	}
     #else
     public func polyPathForOverlayPathRenderer(
-        _ renderer: MKOverlayPathRenderer
+        renderer: MKOverlayPathRenderer
     ) -> CGPath? {
         
         let points = self.points()
