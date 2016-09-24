@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
   s.osx.deployment_target = "10.10"
 
   s.source       = {
-  	:git => " git@bitbucket.org:vnac/geometryutilities.git",
+  	:git => "git@bitbucket.org:vnac/geometryutilities.git",
   	:tag => "#{s.version}"
   }
 
