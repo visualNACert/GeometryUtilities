@@ -8,34 +8,42 @@
 
 import XCTest
 import GeometryUtilities
+import Nimble
 
 class CGRectUtilitiesTest: XCTestCase {
     
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-    
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
-    
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
+    func testCGRectCenterConstructor() {
         
-        #if swift(>=3)
-        let measureBlock = self.measure
-        #endif
+        let rect = CGRect(
+            center: CGPoint(x: 5, y: 7),
+            size: CGSize(width: 3, height: 1)
+        )
         
-        measureBlock {
-            // Put the code you want to measure the time of here.
-        }
+        expect(rect.origin).to(equal(CGPoint(x: 3.5, y: 6.5)))
+        expect(rect.size).to(equal(CGSize(width: 3, height: 1)))
+        
+    }
+    
+    func testCGRectMinPoint() {
+     
+        let rect = CGRect(
+            origin: CGPoint(x: 4, y: 9),
+            size: CGSize(width: 2, height: 3)
+        )
+        
+        expect(rect.minPoint).to(equal(CGPoint(x: 4, y: 9)))
+        
+    }
+    
+    func testCGRectMaxPoint() {
+        
+        let rect = CGRect(
+            origin: CGPoint(x: 4, y: 9),
+            size: CGSize(width: 2, height: 3)
+        )
+        
+        expect(rect.maxPoint).to(equal(CGPoint(x: 6, y: 12)))
+        
     }
     
 }

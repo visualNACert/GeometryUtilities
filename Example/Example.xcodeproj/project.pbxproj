@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13443AF41D981F2D00B28A63 /* CLLocationCoordinate2D+BasicOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13443AF31D981F2D00B28A63 /* CLLocationCoordinate2D+BasicOperators.swift */; };
+		13443AF51D981F2D00B28A63 /* CLLocationCoordinate2D+BasicOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13443AF31D981F2D00B28A63 /* CLLocationCoordinate2D+BasicOperators.swift */; };
 		13DB08571D96D0A600C14018 /* CGRect+Utilities.test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DB08561D96D0A600C14018 /* CGRect+Utilities.test.swift */; };
 		13DB08581D96D0A600C14018 /* CGRect+Utilities.test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DB08561D96D0A600C14018 /* CGRect+Utilities.test.swift */; };
 		1723EAE9BED36844304ABB0F /* Pods_GeometryUtilities_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 043E17FCF32BC372565A8C75 /* Pods_GeometryUtilities_macOS.framework */; };
@@ -15,6 +17,7 @@
 
 /* Begin PBXFileReference section */
 		043E17FCF32BC372565A8C75 /* Pods_GeometryUtilities_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeometryUtilities_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		13443AF31D981F2D00B28A63 /* CLLocationCoordinate2D+BasicOperators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CLLocationCoordinate2D+BasicOperators.swift"; path = "../Test/CLLocationCoordinate2D+BasicOperators.swift"; sourceTree = "<group>"; };
 		13DB083E1D96CFE400C14018 /* GeometryUtilities-iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GeometryUtilities-iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		13DB084B1D96CFF400C14018 /* GeometryUtilities-macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GeometryUtilities-macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		13DB08561D96D0A600C14018 /* CGRect+Utilities.test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CGRect+Utilities.test.swift"; path = "../Test/CGRect+Utilities.test.swift"; sourceTree = "<group>"; };
@@ -68,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				13DB08561D96D0A600C14018 /* CGRect+Utilities.test.swift */,
+				13443AF31D981F2D00B28A63 /* CLLocationCoordinate2D+BasicOperators.swift */,
 			);
 			name = Test;
 			sourceTree = "<group>";
@@ -287,6 +291,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13443AF41D981F2D00B28A63 /* CLLocationCoordinate2D+BasicOperators.swift in Sources */,
 				13DB08571D96D0A600C14018 /* CGRect+Utilities.test.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -295,6 +300,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13443AF51D981F2D00B28A63 /* CLLocationCoordinate2D+BasicOperators.swift in Sources */,
 				13DB08581D96D0A600C14018 /* CGRect+Utilities.test.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -35,22 +35,14 @@ extension CGRect {
 	/// Point located at minimum X and Y values of this rect.
 	public var minPoint: CGPoint {
 		get {
-            #if swift(>=3.0)
 			return CGPoint(x: self.minX, y: self.minY)
-            #else
-            return CGPointMake(CGRectGetMinX(self), CGRectGetMinY(self))
-            #endif
 		}
 	}
 
 	/// Point located at maximum X and Y values of this rect.
 	public var maxPoint: CGPoint {
 		get {
-            #if swift(>=3.0)
 			return CGPoint(x: self.maxX, y: self.maxY)
-            #else
-            return CGPointMake(CGRectGetMaxX(self), CGRectGetMaxY(self))
-            #endif
 		}
 	}
 
