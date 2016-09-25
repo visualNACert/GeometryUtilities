@@ -11,7 +11,7 @@ import StringUtilities
 
 public struct GeometryUtilities {
 
-    #if swift(>=3)
+    #if swift(>=3.0)
 	/**
 	 Returns minimum and maximum longitude and latitude of polygons in given
 	 WKT geometry, its centroid and total point count.

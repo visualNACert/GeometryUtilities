@@ -12,7 +12,7 @@ extension MKTileOverlayPath {
 
 	// Utils from: https://github.com/Sumbera/WMSOnMapKit-iOS7
 
-    #if swift(>=3)
+    #if swift(>=3.0)
 	fileprivate func bboxWGS84XOf(column: Int, zoom: Int) -> Double {
 		return Double(column) / pow(2.0, Double(zoom)) * 360.0 - 180
 	}
@@ -76,7 +76,7 @@ extension MKTileOverlayPath {
 		}
 	}
 
-    #if swift(>=3)
+    #if swift(>=3.0)
 	fileprivate var bboxMercatorComponents: (Double, Double, Double, Double) {
 		get {
 			let (left, right, bottom, top) = self.bboxWGS84Components

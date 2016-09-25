@@ -29,7 +29,7 @@ class CGRectUtilitiesTest: XCTestCase {
     func testPerformanceExample() {
         // This is an example of a performance test case.
         
-        #if swift(>=3)
+        #if swift(>=3.0)
         let measureBlock = self.measure
         #endif
         

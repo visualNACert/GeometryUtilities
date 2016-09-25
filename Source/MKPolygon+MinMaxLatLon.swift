@@ -18,7 +18,7 @@ extension MKPolygon {
 	 - returns: Rectangular polygon covering given `MinMaxLonLat`.
 	 */
 	public convenience init(minMaxLatLon mmll: MinMaxLonLat) {
-        #if swift(>=3)
+        #if swift(>=3.0)
 		let points = UnsafeMutablePointer<CLLocationCoordinate2D>.allocate(capacity: 5)
         #else
         let points = UnsafeMutablePointer<CLLocationCoordinate2D>.alloc(5)
@@ -29,7 +29,7 @@ extension MKPolygon {
 		points[3] = CLLocationCoordinate2D(latitude: mmll.minLat, longitude: mmll.maxLon)
 		points[4] = CLLocationCoordinate2D(latitude: mmll.minLat, longitude: mmll.minLon)
 		self.init(coordinates: points, count: 5)
-        #if swift(>=3)
+        #if swift(>=3.0)
 		points.deinitialize(count: 5)
         #else
         points.destroy(5)
