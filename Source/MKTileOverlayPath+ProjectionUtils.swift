@@ -21,14 +21,6 @@ extension MKTileOverlayPath {
 		return 180.0 / M_PI * atan(0.5 * (exp(n) - exp(-n)));
 	}
 
-	private func mercatorXOf(longitude longitude: Double) -> Double {
-		return longitude * 20037508.34 / 180;
-	}
-
-	private func mercatorYOf(latitude latitude: Double) -> Double {
-		return log(tan((90 + latitude) * M_PI / 360)) / (M_PI / 180) * 20037508.34 / 180;
-	}
-
 	private var bboxWGS84Components: (Double, Double, Double, Double) {
 		get {
 			let left = bboxWGS84XOf(column: self.x, zoom: self.z); // minX
@@ -49,11 +41,19 @@ extension MKTileOverlayPath {
 	private var bboxMercatorComponents: (Double, Double, Double, Double) {
 		get {
 			let (left, right, bottom, top) = self.bboxWGS84Components
+            let bottomLeft = CLLocationCoordinate2D(
+                latitude: bottom,
+                longitude: left
+            )
+            let topRight = CLLocationCoordinate2D(
+                latitude: top,
+                longitude: right
+            )
 			return (
-				self.mercatorXOf(longitude: left),
-				self.mercatorXOf(longitude: right),
-				self.mercatorYOf(latitude: bottom),
-				self.mercatorYOf(latitude: top)
+				bottomLeft.mercatorX,
+				topRight.mercatorX,
+				bottomLeft.mercatorY,
+				topRight.mercatorY
 			)
 		}
 	}
