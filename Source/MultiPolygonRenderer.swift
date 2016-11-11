@@ -13,7 +13,7 @@ import UIKit
 public typealias Color = UIColor
 #else
 import AppKit
-open typealias Color = NSColor
+public typealias Color = NSColor
 #endif
 
 open class MultiPolygonRenderer: MKOverlayPathRenderer {
@@ -61,46 +61,6 @@ open class MultiPolygonRenderer: MKOverlayPathRenderer {
         self.lineWidth = style.width
         
     }
-    
-	/**
-	 Creates a new renderer that can render a `MultiPolygonOverlay`.
-
-	 - parameter multiPolygonOverlay: `MultiPolygonOverlay` to be rendered.
-     - parameter fillColor: Color to be used to fill polygon.
-     - parameter strokeColor: Color to be used to stroke polygon.
-     - parameter selectedFillColor: Color to be used to fill polygon when
-     selected.
-     - parameter selectedStrokeColor: Color to be used to stroke polygon when
-     selected.
-	 - parameter useSimplifiedGeometry: Whether simplified geometry should be
-	 used (`true`) or real, complex one (`false`).
-
-	 - returns: Renderer that can render given multi polygon overlay.
-	 */
-    @available(*, deprecated: 1.1.0, renamed: "init(multiPolygonOverlay:normalStyle:selectedStyle:useSimplifiedGeometry:)")
-	public convenience init(
-		multiPolygonOverlay: MultiPolygonOverlay,
-		fillColor: UIColor,
-		strokeColor: UIColor,
-		selectedFillColor: UIColor,
-		selectedStrokeColor: UIColor,
-		useSimplifiedGeometry: Bool = false
-    ) {
-        self.init(
-            multiPolygonOverlay: multiPolygonOverlay,
-            normalStyle: (
-                fill: fillColor,
-                stroke: strokeColor,
-                width: 5.0
-            ),
-            selectedStyle: (
-                fill: selectedFillColor,
-                stroke: selectedStrokeColor,
-                width: 5.0
-            ),
-            useSimplifiedGeometry: useSimplifiedGeometry
-        )
-	}
 
 	fileprivate override init(overlay: MKOverlay) {
 		self.polygons = []

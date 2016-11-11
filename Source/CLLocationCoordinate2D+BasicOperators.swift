@@ -105,6 +105,26 @@ public func abs(_ value: CLLocationCoordinate2D) -> CLLocationCoordinate2D {
     )
 }
 
+extension CLLocationCoordinate2D {
+
+	/**
+     Returns distance from this coordinate to given one.
+     
+     - parameter coordinate: Coordinate to which distance will be computed.
+     
+     - returns: Distance using Pytagora's theorem.
+     */
+	public func distance(
+		toCoordinate coordinate: CLLocationCoordinate2D
+	) -> Double {
+		let delta = self - coordinate
+		return sqrt(
+			delta.latitude * delta.latitude + delta.longitude * delta.longitude
+		)
+	}
+
+}
+
 extension Collection
 where Iterator.Element == CLLocationCoordinate2D, Self.IndexDistance == Int {
 
