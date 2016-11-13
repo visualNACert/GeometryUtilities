@@ -99,8 +99,8 @@ open class MultiPolygonRenderer: MKOverlayPathRenderer {
 
 	 - returns: `true` if point is contained in this renderer`s polygons.
 	 */
-    @available(*, introduced: 1.1.0)
-    open func contains(point: MKMapPoint) -> Bool {
+    @available(*, introduced: 1.2.0)
+    open func contains(_ point: MKMapPoint) -> Bool {
         
         let polygonViewPoint = self.point(for: point)
         for polygon in self.polygons {
@@ -115,6 +115,21 @@ open class MultiPolygonRenderer: MKOverlayPathRenderer {
         }
         return false
     }
+    
+    /**
+     Returns whether given point is found inside this renderer's polygons or not.
+     
+     - note: [Source](http://stackoverflow.com/a/15235844)
+     
+     - parameter point: Map point to look for.
+     
+     - returns: `true` if point is contained in this renderer`s polygons.
+     */
+    @available(*, introduced: 1.1.0, deprecated: 1.2.0, renamed: "contains()")
+    open func contains(point: MKMapPoint) -> Bool {
+        return self.contains(point)
+    }
+    
     /**
      Returns whether given point is found inside this renderer's polygons or not.
      

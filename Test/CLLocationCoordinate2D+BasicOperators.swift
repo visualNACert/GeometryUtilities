@@ -30,7 +30,7 @@ class CLLocationCoordinate2DBasicOperatorsTest: XCTestCase {
     }
     
     func testCoordinateZero() {
-        expect(CLLocationCoordinate2DZero).to(
+        expect(CLLocationCoordinate2D.Zero).to(
             equal(CLLocationCoordinate2D(latitude: 0, longitude: 0))
         )
     }

@@ -9,6 +9,18 @@
 import MapKit
 
 extension MKOverlayPathRenderer {
+    
+    /**
+     Returns `CGPathRef` equivalent to given polygon in this renderer.
+     
+     - parameter polygon: Polygon whose equivalent path will be returned.
+     
+     - returns: Path equivalent to given polygon in this renderer.
+     */
+    @available(*, introduced: 1.2.0)
+    public func polyPath(for polygon: MKPolygon) -> CGPath? {
+        return polygon.polyPath(forOverlayPathRenderer: self)
+    }
 
 	/**
 	 Returns `CGPathRef` equivalent to given polygon in this renderer.
@@ -17,9 +29,9 @@ extension MKOverlayPathRenderer {
 
 	 - returns: Path equivalent to given polygon in this renderer.
 	 */
-    @available(*, introduced: 0.0.8)
+    @available(*, introduced: 0.0.8, deprecated: 1.2.0, renamed: "polyPath(for:)")
     public func polyPath(forPolygon polygon: MKPolygon) -> CGPath? {
-        return polygon.polyPath(forOverlayPathRenderer: self)
+        return self.polyPath(for: polygon)
     }
 
 }
@@ -31,14 +43,13 @@ extension MKPolygon {
      
      - note: [Source](http://stackoverflow.com/a/17673411).
 
-	 - parameter forOverlayPathRenderer: Renderer defining coordinate system 
+	 - parameter renderer: Renderer defining coordinate system
      where returned path will be drawn.
 
 	 - returns: Path equivalent to this polygon in given renderer.
 	 */
-	public func polyPath(
-        forOverlayPathRenderer renderer: MKOverlayPathRenderer
-	) -> CGPath? {
+    @available(*, introduced: 1.2.0)
+	public func polyPath(for renderer: MKOverlayPathRenderer) -> CGPath? {
 
 		let points = self.points()
 		let pointsCount = self.pointCount
@@ -66,5 +77,22 @@ extension MKPolygon {
 		return path
 
 	}
+    
+    /**
+     Returns a `CGPathRef` equivalent to this polygon in given renderer.
+     
+     - note: [Source](http://stackoverflow.com/a/17673411).
+     
+     - parameter renderer: Renderer defining coordinate system
+     where returned path will be drawn.
+     
+     - returns: Path equivalent to this polygon in given renderer.
+     */
+    @available(*, deprecated: 1.2.0, renamed: "polyPath(for:)")
+    public func polyPath(
+        forOverlayPathRenderer renderer: MKOverlayPathRenderer
+    ) -> CGPath? {
+        return self.polyPath(for: renderer)
+    }
 
 }

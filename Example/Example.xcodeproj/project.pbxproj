@@ -150,7 +150,7 @@
 				TargetAttributes = {
 					13DB083D1D96CFE400C14018 = {
 						CreatedOnToolsVersion = 7.3.1;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0810;
 					};
 					13DB084A1D96CFF400C14018 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -363,7 +363,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6EDA3AE6DD9573F0B0695C46 /* Pods-GeometryUtilities-iOS.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -415,7 +414,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 31F0622D2947C629E6F009CB /* Pods-GeometryUtilities-iOS.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -460,7 +458,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1B6D9232B0AD11C3AFA5FCD7 /* Pods-GeometryUtilities-macOS.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -513,7 +510,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BBDD4A73B7B9CCFB959EC960 /* Pods-GeometryUtilities-macOS.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";

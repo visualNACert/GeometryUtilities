@@ -8,7 +8,7 @@ target 'GeometryUtilities-iOS' do
 	use_frameworks!
 
 	pod 'GeometryUtilities', :path => '../'
-	pod 'Nimble', '~> 5.0'
+	pod 'Nimble', '~> 5'
 
 end
 
@@ -19,6 +19,6 @@ target 'GeometryUtilities-macOS' do
 	use_frameworks!
 
 	pod 'GeometryUtilities', :path => '../'
-	pod 'Nimble', '~> 5.0'
+	pod 'Nimble', '~> 5'
 
 end
