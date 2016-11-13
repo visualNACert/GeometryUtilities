@@ -24,6 +24,6 @@ Pod::Spec.new do |s|
   s.ios.source_files = 'Source/{iOS}/**/*', 'Source/*.{h,m,swift}'
   s.osx.source_files = 'Source/{macOS}/**/*', 'Source/*.{h,m,swift}'
 
-  s.dependency 'StringUtilities', '~> 1.0'
+  s.dependency 'StringUtilities', '~> 0'
 
 end

@@ -28,7 +28,7 @@ typedef struct {
  *
  *  @return Minimum and maximum longitude and latitude found.
  */
-MinMaxLonLat parseWKT(NSString *wkt);
+MinMaxLonLat parseWKT(NSString * _Nonnull wkt);
 
 /**
  *  Returns list of polygons in given WKT multipolygon string.
@@ -37,6 +37,6 @@ MinMaxLonLat parseWKT(NSString *wkt);
  *
  *  @return List of polygons contained in given string.
  */
-NSArray<MKPolygon *> *polygonsInWKT(NSString *wkt);
+ NSArray<MKPolygon *> * _Nonnull polygonsInWKT(NSString * _Nonnull wkt);
 
 #endif /* WKTParser_h */

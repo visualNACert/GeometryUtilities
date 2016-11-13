@@ -83,7 +83,7 @@ NS_INLINE NSString *NSStringFromMinMaxLonLat(MinMaxLonLat mmll) {
 }
  */
 
-MinMaxLonLat parseWKT(NSString *wkt) {
+MinMaxLonLat parseWKT(NSString * _Nonnull wkt) {
 
   MinMaxLonLat mmll = base();
 
@@ -128,7 +128,7 @@ MinMaxLonLat parseWKT(NSString *wkt) {
   return mmll;
 }
 
-NSArray<MKPolygon *> *polygonsInWKT(NSString *wkt) {
+NSArray<MKPolygon *> * _Nonnull polygonsInWKT(NSString * _Nonnull wkt) {
 
   static NSRegularExpression *polygonsRegex, *coordinatesRegex;
   static dispatch_once_t onceToken;
