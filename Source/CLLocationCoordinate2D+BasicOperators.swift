@@ -157,7 +157,7 @@ where Iterator.Element == CLLocationCoordinate2D, Self.IndexDistance == Int {
 	 */
 	public func centroid() -> CLLocationCoordinate2D {
 		guard self.count > 0 else { return kCLLocationCoordinate2DInvalid }
-		return self.reduce(CLLocationCoordinate2DZero) { $0 + $1 } / self.count
+		return self.reduce(CLLocationCoordinate2D.Zero) { $0 + $1 } / self.count
 	}
 
 }

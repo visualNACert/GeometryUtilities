@@ -13,7 +13,7 @@ extension MKPolygon {
 	/// Returns coordinates of points of this polygon.
 	public func coordinates() -> [CLLocationCoordinate2D] {
 		var coords = [CLLocationCoordinate2D](
-            repeating: CLLocationCoordinate2DZero,
+            repeating: CLLocationCoordinate2D.Zero,
             count: self.pointCount
 		)
 		self.getCoordinates(

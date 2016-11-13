@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "GeometryUtilities"
-  s.version      = "1.2.0"
+  s.version      = "1.2.1"
   s.summary      = "A collection of utilities to handle geometry in WKT format"
 
   s.description  = <<-DESC

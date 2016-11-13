@@ -75,7 +75,7 @@ open class MultiPolygonRenderer: MKOverlayPathRenderer {
 		// Taken from: http://stackoverflow.com/a/17673411
 
 		for polygon in self.polygons {
-            guard let path = self.polyPath(forPolygon: polygon) else { continue }
+            guard let path = self.polyPath(for: polygon) else { continue }
 			self.applyFillProperties(to: context, atZoomScale: zoomScale)
 			context.beginPath()
 			context.addPath(path)
@@ -105,7 +105,7 @@ open class MultiPolygonRenderer: MKOverlayPathRenderer {
         let polygonViewPoint = self.point(for: point)
         for polygon in self.polygons {
             
-            guard let polypath = self.polyPath(forPolygon: polygon),
+            guard let polypath = self.polyPath(for: polygon),
                 polypath.contains(polygonViewPoint) else { continue }
             
             // TODO: Check interior polygons to discard false positives

@@ -19,7 +19,7 @@ extension MKOverlayPathRenderer {
      */
     @available(*, introduced: 1.2.0)
     public func polyPath(for polygon: MKPolygon) -> CGPath? {
-        return polygon.polyPath(forOverlayPathRenderer: self)
+        return polygon.polyPath(for: self)
     }
 
 	/**
@@ -61,7 +61,7 @@ extension MKPolygon {
 		if let interiorPolygons = self.interiorPolygons {
 			for interiorPolygon in interiorPolygons {
                 let pathToAdd = interiorPolygon.polyPath(
-                    forOverlayPathRenderer: renderer
+                    for: renderer
                 )!
                 path.addPath(pathToAdd)
 			}
