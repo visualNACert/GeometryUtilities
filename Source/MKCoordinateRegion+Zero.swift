@@ -11,13 +11,13 @@ import MapKit
 extension MKCoordinateRegion {
     
     /// Returns a Zero coordinate region.
-    static let Zero: MKCoordinateRegion = MKCoordinateRegionMake(
+    public static let Zero: MKCoordinateRegion = MKCoordinateRegionMake(
         CLLocationCoordinate2D.Zero,
         MKCoordinateSpan(latitudeDelta: 0, longitudeDelta: 0)
     )
     
     /// Whether this coordinate region is centered at 0 with a zero size or not.
-    var isZero: Bool {
+    public var isZero: Bool {
         get {
             return (
                 self.center.latitude == 0 &&
