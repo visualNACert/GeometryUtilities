@@ -37,6 +37,7 @@ extension Collection where Iterator.Element == MKPolygon {
     public func wktMultipolygonString() -> String {
         let polygons = self.map { $0.wktPolygonString() }
         let polygonsString = polygons.joined(separator: ", ")
+        guard polygonsString != "" else { return "" }
         return "MULTIPOLYGON(\(polygonsString))"
     }
     

@@ -183,7 +183,9 @@ NSArray<MKPolygon *> * _Nonnull polygonsInWKT(NSString * _Nonnull wkt) {
     MKPolygon *polygon = [MKPolygon polygonWithCoordinates:polygonCoordinates
                                                      count:coordinatesAdded];
 
-    [polygons addObject:polygon];
+    if (coordinatesAdded > 0) {
+      [polygons addObject:polygon];
+    }
 
     free(polygonCoordinates);
   }
