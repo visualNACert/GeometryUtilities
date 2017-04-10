@@ -21,8 +21,8 @@ extension CLLocationCoordinate2D {
     var mercatorY: Double {
         get {
             return log(
-                tan((90 + latitude) * M_PI / 360)
-            ) / (M_PI / 180) * 20037508.34 / 180;
+                tan((90 + latitude) * .pi / 360)
+            ) / (.pi / 180) * 20037508.34 / 180;
         }
     }
     

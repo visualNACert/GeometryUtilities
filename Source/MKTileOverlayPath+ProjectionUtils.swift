@@ -17,8 +17,8 @@ extension MKTileOverlayPath {
 	}
 
 	fileprivate func bboxWGS84YOf(row: Int, zoom: Int) -> Double {
-		let n = M_PI - 2.0 * M_PI * Double(row) / pow(2.0, Double(zoom))
-		return 180.0 / M_PI * atan(0.5 * (exp(n) - exp(-n)))
+		let n = .pi - 2.0 * .pi * Double(row) / pow(2.0, Double(zoom))
+		return 180.0 / .pi * atan(0.5 * (exp(n) - exp(-n)))
 	}
 
 	fileprivate var bboxWGS84Components: (Double, Double, Double, Double) {
