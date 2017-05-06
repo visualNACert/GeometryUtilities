@@ -10,7 +10,7 @@ import MapKit
 
 extension MKCoordinateRegion {
     
-    /// Whether this coordinate region is centered at 0 with a zero size or not.
+    /// Whether this coordinate region is valid or not.
     public var valid: Bool {
         return
             (-90.0...90.0).contains(self.center.latitude) &&
