@@ -1,37 +1,42 @@
-[![Build Status](https://www.bitrise.io/app/ddd1a998fb0dec4f.svg?token=rOVw5_IGa6Nv4G0EyvkTOQ&branch=master)](https://www.bitrise.io/app/ddd1a998fb0dec4f) ![platform iOS](https://img.shields.io/badge/platform-iOS-blue.svg) ![platform macOS](https://img.shields.io/badge/platform-macOS-blue.svg) ![swift2 compatible 0.0.9](https://img.shields.io/badge/swift2-0.0.9-brightgreen.svg) ![swift3 compatible](https://img.shields.io/badge/swift3-compatible-brightgreen.svg) ![pod 1.2.1](https://img.shields.io/badge/pod-1.2.1-blue.svg)
+[![Build Status](https://travis-ci.org/visualNACert/GeometryUtilities.svg?branch=master)](https://travis-ci.org/visualNACert/GeometryUtilities) [![codecov](https://codecov.io/gh/visualNACert/GeometryUtilities/branch/master/graph/badge.svg)](https://codecov.io/gh/visualNACert/GeometryUtilities) [![documentation](https://visualnacert.github.io/GeometryUtilities/badge.svg)](https://visualnacert.github.io/GeometryUtilities/) ![pod platforms](https://img.shields.io/cocoapods/p/GeometryUtilities.svg) ![pod version](https://img.shields.io/cocoapods/v/GeometryUtilities.svg) ![pod license](https://img.shields.io/cocoapods/l/GeometryUtilities.svg)
 
 # Geometry Utilities
 
-This is a small collection of geometry utilities to work with data in different projections, multiple polygons and polygon overlays.
+This is a small collection of geometry utilities to work with data in different projections, multiple polygons and polygon overlays:
 
-- Parse `WKT` and extract multiple polygons.
+- Parse `WKT` and extract multiple polygons (implemented in Objective-C for performance's sake).
 - Convert multiple polygons into single `CGPathRef` to be drawable with `MapKit` as a single polygon.
 - Convert from `Mercator` projection and `WGS84` coordinate system.
 
-## Swift 2.2 & 2.3 support
+# API
 
-This library supports both Swift 2.2 and 2.3 up to version `0.0.9` (included) which also supports Swift 3.0.
+```swift
+// Extract polygons from a WKT string
+let wkt = "MULTIPOLYGON(((0.0 0.0, 0.0 1.0, 1.0 1.0, 1.0 0.0)))"
+let polygons = WKT.polygons(in: wkt)
+let polygon = polygons.first
+polygon?.coordinates() // (0, 0), (0, 1), (1, 1), (1, 0), (0, 0)
 
-## Swift 3.0 support
-
-Version `0.0.9` is the first one supporting Swift 3.0 and the latest one supporting older Swift versions. `0.x` versions and discontinued and future features and improvements will be released on `1.x` versions.
-
-# Changelog
-
-## 1.2.1
-
-- Updated codebase to use new non-deprecated methods.
-
-## 1.2
-
-- Minor Swift 3 API design guidelines conformance changes.
-- Updated `StringUtilities` dependency.
-
-## 1.1
-
-- Added macOS support for `MultiPolygonRenderer`.
-- Fixed Swift 3 support.
-
-## 1.0
-
-- Dropped Swift 2 support.
+// Serialize polygons into a WKT string
+let polygon = MKPolygon(
+    coordinates: [
+        CLLocationCoordinate2D(
+            latitude: 0,
+            longitude: 0
+        ),
+        CLLocationCoordinate2D(
+            latitude: 1,
+            longitude: 0
+        ),
+        CLLocationCoordinate2D(
+            latitude: 1,
+            longitude: 1
+        ),
+        CLLocationCoordinate2D(
+            latitude: 0,
+            longitude: 1
+        )
+    ]
+)
+polygon.wktString() // MULTIPOLYGON(((0.0 0.0, 0.0 1.0, 1.0 1.0, 1.0 0.0)))
+```
