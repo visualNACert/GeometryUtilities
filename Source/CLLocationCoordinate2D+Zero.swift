@@ -19,15 +19,4 @@ extension CLLocationCoordinate2D {
         return self.latitude == 0 && self.longitude == 0
     }
     
-    @available(*, introduced: 1.2.0, deprecated: 1.4.0, renamed:"CLLocationCoordinate2D.zero")
-    /// Location coordinate for point at latitude and longitude 0.
-    public static let Zero = CLLocationCoordinate2D.zero
-    
 }
-
-/// Location coordinate for point at latitude and longitude 0.
-@available(*, deprecated: 1.2.0, renamed: "CLLocationCoordinate2D.Zero")
-public let CLLocationCoordinate2DZero = CLLocationCoordinate2D(
-    latitude: 0,
-    longitude: 0
-)

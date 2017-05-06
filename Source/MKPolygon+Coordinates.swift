@@ -48,21 +48,6 @@ extension MKPolygon {
         return polygonRenderer.path.contains(polygonViewPoint)
 
 	}
-    
-    /**
-     Returns whether point at given coordinates is contained in this polygon
-     or not.
-     
-     - parameter coordinates: Coordinates of point to be checked.
-     
-     - returns: `true` if point is contained in this polygon.
-     */
-    @available(*, deprecated: 1.4.0, renamed: "contains(pointAt:)")
-    public func contains(
-        pointAtCoordinates coordinates: CLLocationCoordinate2D
-    ) -> Bool {
-        return self.contains(pointAt: coordinates)
-    }
 
 	/* Possible alternative solution that should be considered...
 	 // - note: Taken from: http://alienryderflex.com/polygon/

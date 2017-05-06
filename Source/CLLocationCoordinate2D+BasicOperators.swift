@@ -116,20 +116,6 @@ extension CLLocationCoordinate2D {
 		)
 	}
 
-    /**
-     Returns distance from this coordinate to given one.
-
-     - parameter coordinate: Coordinate to which distance will be computed.
-
-     - returns: Distance using Pytagora's theorem.
-     */
-    @available(*, deprecated: 1.2.0, renamed: "distance(to:)")
-    public func distance(
-        toCoordinate coordinate: CLLocationCoordinate2D
-    ) -> Double {
-        return self.distance(to: coordinate)
-    }
-
 }
 
 extension Collection
@@ -142,7 +128,7 @@ where Iterator.Element == CLLocationCoordinate2D, Self.IndexDistance == Int {
 	 */
 	public func centroid() -> CLLocationCoordinate2D {
 		guard self.count > 0 else { return kCLLocationCoordinate2DInvalid }
-		return self.reduce(CLLocationCoordinate2D.Zero) { $0 + $1 } / self.count
+		return self.reduce(CLLocationCoordinate2D.zero) { $0 + $1 } / self.count
 	}
 
 }

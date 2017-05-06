@@ -44,12 +44,6 @@ class CLLocationCoordinate2DBasicOperatorsTest: XCTestCase {
         )
     }
     
-    func test__coordinateZero_deprecated() {
-        expect(CLLocationCoordinate2D.Zero).to(
-            equal(CLLocationCoordinate2D(latitude: 0, longitude: 0))
-        )
-    }
-    
     func test__abs() {
         
         expect(abs(CLLocationCoordinate2D(
@@ -164,23 +158,6 @@ class CLLocationCoordinate2DBasicOperatorsTest: XCTestCase {
         
         expect(start.distance(to: end)).to(beCloseTo(5, within: 0.1))
         expect(end.distance(to: start)).to(beCloseTo(5, within: 0.1))
-        
-    }
-    
-    func test__distance_deprecated() {
-        
-        let start = CLLocationCoordinate2D(
-            latitude: 0,
-            longitude: 0
-        )
-        
-        let end = CLLocationCoordinate2D(
-            latitude: 4,
-            longitude: 3
-        )
-        
-        expect(start.distance(toCoordinate: end)).to(beCloseTo(5, within: 0.1))
-        expect(end.distance(toCoordinate: start)).to(beCloseTo(5, within: 0.1))
         
     }
     

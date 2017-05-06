@@ -17,10 +17,6 @@ extension MKCoordinateRegion {
         MKCoordinateSpan(latitudeDelta: 0, longitudeDelta: 0)
     )
     
-    /// Returns a `(0, 0, 0, 0)` coordinate region.
-    @available(*, deprecated: 1.4.0, renamed: "zero")
-    public static let Zero: MKCoordinateRegion = MKCoordinateRegion.zero
-    
     /// Whether this coordinate region is centered at 0 with a zero size or not.
     public var isZero: Bool {
         return (

@@ -59,28 +59,4 @@ typedef struct {
 
 @end
 
-/**
- *  Legacy name of `MinMaxLatLon`.
- */
-typedef MinMaxLatLon MinMaxLonLat DEPRECATED_MSG_ATTRIBUTE("Use MinMaxLatLon instead.");
-
-/**
- *  Returns minimum and maximum longitude and latitude found in given WKT
- *  multipolygon string.
- *
- *  @param wkt WKT multipolygon string to parse.
- *
- *  @return Minimum and maximum longitude and latitude found.
- */
-MinMaxLatLon parseWKT(NSString * _Nonnull wkt) DEPRECATED_MSG_ATTRIBUTE("Use [WKT minMaxLatLonOf:] instead.");
-
-/**
- *  Returns list of polygons in given WKT multipolygon string.
- *
- *  @param wkt WKT multipolygon string to parse.
- *
- *  @return List of polygons contained in given string.
- */
-NSArray<MKPolygon *> * _Nonnull polygonsInWKT(NSString * _Nonnull wkt) DEPRECATED_MSG_ATTRIBUTE("Use [WKT polygonsIn:] instead.");
-
 #endif /* WKTParser_h */

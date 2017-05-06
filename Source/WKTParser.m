@@ -191,11 +191,3 @@ NS_INLINE MinMaxLatLon base() {
 }
 
 @end
-
-MinMaxLatLon parseWKT(NSString * _Nonnull wkt) {
-    return [WKT minMaxLatLonOf: wkt];
-}
-
-NSArray<MKPolygon *> * _Nonnull polygonsInWKT(NSString * _Nonnull wkt) {
-    return [WKT polygonsIn: wkt];
-}

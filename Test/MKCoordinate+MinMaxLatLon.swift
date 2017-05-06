@@ -62,32 +62,7 @@ class MKCoordinateMinMaxLatLonTest: XCTestCase {
             .to(beCloseTo(5.1, within: 0.1))
         
     }
-    
-    func test__MinMaxLatLon_MKCoodinateRegion_constructor_deprecated() {
         
-        let mmll = MinMaxLatLon(
-            minLat: 0.5,
-            minLon: -2.1,
-            maxLat: 1.7,
-            maxLon: 3,
-            centroidLat: 0.45,
-            centroidLon: 1.1,
-            pointCount: 4
-        )
-        
-        let coordinateRegion = MKCoordinateRegion(minMaxLonLat: mmll)
-        
-        expect(coordinateRegion.center.latitude)
-            .to(beCloseTo(1.1, within: 0.1))
-        expect(coordinateRegion.center.longitude)
-            .to(beCloseTo(0.45, within: 0.1))
-        expect(coordinateRegion.span.latitudeDelta)
-            .to(beCloseTo(1.2, within: 0.1))
-        expect(coordinateRegion.span.longitudeDelta)
-            .to(beCloseTo(5.1, within: 0.1))
-        
-    }
-    
     func test__MKCoodinateRegion_MinMaxLatLon_getter() {
         
         let coordinateRegion = MKCoordinateRegion(

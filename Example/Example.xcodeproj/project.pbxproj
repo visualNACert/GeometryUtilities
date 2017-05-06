@@ -37,6 +37,8 @@
 		13DB08581D96D0A600C14018 /* CGRect+Utilities.test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DB08561D96D0A600C14018 /* CGRect+Utilities.test.swift */; };
 		1723EAE9BED36844304ABB0F /* Pods_GeometryUtilities_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 043E17FCF32BC372565A8C75 /* Pods_GeometryUtilities_macOS.framework */; };
 		2A7F51C9A8B0942ABD8F3441 /* Pods_GeometryUtilities_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA7DAFD38373A823DA19267B /* Pods_GeometryUtilities_iOS.framework */; };
+		49867917AEE5DB5D015BC602 /* Pods_Tests_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AA990F8D4BC1F4177444EF9 /* Pods_Tests_iOS.framework */; };
+		ED7F5BDE303FC75E7EC0CC31 /* Pods_Tests_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48C3C71ABF16307598B6DBBE /* Pods_Tests_macOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,8 +61,14 @@
 		13DB08561D96D0A600C14018 /* CGRect+Utilities.test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CGRect+Utilities.test.swift"; path = "../Test/CGRect+Utilities.test.swift"; sourceTree = "<group>"; };
 		1B6D9232B0AD11C3AFA5FCD7 /* Pods-GeometryUtilities-macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeometryUtilities-macOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GeometryUtilities-macOS/Pods-GeometryUtilities-macOS.debug.xcconfig"; sourceTree = "<group>"; };
 		31F0622D2947C629E6F009CB /* Pods-GeometryUtilities-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeometryUtilities-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-GeometryUtilities-iOS/Pods-GeometryUtilities-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		32465D0A9B83646E6D4E8746 /* Pods-Tests-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tests-iOS/Pods-Tests-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		3AA990F8D4BC1F4177444EF9 /* Pods_Tests_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tests_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		48C3C71ABF16307598B6DBBE /* Pods_Tests_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tests_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		655219EAC2C71D78D7EF8DA1 /* Pods-Tests-macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests-macOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tests-macOS/Pods-Tests-macOS.debug.xcconfig"; sourceTree = "<group>"; };
 		6EDA3AE6DD9573F0B0695C46 /* Pods-GeometryUtilities-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeometryUtilities-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GeometryUtilities-iOS/Pods-GeometryUtilities-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		7E388EEA5B7A33042C4E66F7 /* Pods-Tests-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tests-iOS/Pods-Tests-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		BBDD4A73B7B9CCFB959EC960 /* Pods-GeometryUtilities-macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeometryUtilities-macOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-GeometryUtilities-macOS/Pods-GeometryUtilities-macOS.release.xcconfig"; sourceTree = "<group>"; };
+		C3402DC78D4EAA36606F5771 /* Pods-Tests-macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests-macOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tests-macOS/Pods-Tests-macOS.release.xcconfig"; sourceTree = "<group>"; };
 		FA7DAFD38373A823DA19267B /* Pods_GeometryUtilities_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeometryUtilities_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -70,6 +78,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A7F51C9A8B0942ABD8F3441 /* Pods_GeometryUtilities_iOS.framework in Frameworks */,
+				49867917AEE5DB5D015BC602 /* Pods_Tests_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +87,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1723EAE9BED36844304ABB0F /* Pods_GeometryUtilities_macOS.framework in Frameworks */,
+				ED7F5BDE303FC75E7EC0CC31 /* Pods_Tests_macOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,6 +139,8 @@
 			children = (
 				FA7DAFD38373A823DA19267B /* Pods_GeometryUtilities_iOS.framework */,
 				043E17FCF32BC372565A8C75 /* Pods_GeometryUtilities_macOS.framework */,
+				3AA990F8D4BC1F4177444EF9 /* Pods_Tests_iOS.framework */,
+				48C3C71ABF16307598B6DBBE /* Pods_Tests_macOS.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -140,6 +152,10 @@
 				31F0622D2947C629E6F009CB /* Pods-GeometryUtilities-iOS.release.xcconfig */,
 				1B6D9232B0AD11C3AFA5FCD7 /* Pods-GeometryUtilities-macOS.debug.xcconfig */,
 				BBDD4A73B7B9CCFB959EC960 /* Pods-GeometryUtilities-macOS.release.xcconfig */,
+				7E388EEA5B7A33042C4E66F7 /* Pods-Tests-iOS.debug.xcconfig */,
+				32465D0A9B83646E6D4E8746 /* Pods-Tests-iOS.release.xcconfig */,
+				655219EAC2C71D78D7EF8DA1 /* Pods-Tests-macOS.debug.xcconfig */,
+				C3402DC78D4EAA36606F5771 /* Pods-Tests-macOS.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -254,7 +270,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GeometryUtilities-macOS/Pods-GeometryUtilities-macOS-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tests-macOS/Pods-Tests-macOS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		4CA4EA5D88AAC7AFA7BA8498 /* [CP] Embed Pods Frameworks */ = {
@@ -269,7 +285,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GeometryUtilities-iOS/Pods-GeometryUtilities-iOS-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tests-iOS/Pods-Tests-iOS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		535C32B9100E57FAC2CF9E45 /* [CP] Check Pods Manifest.lock */ = {
@@ -284,7 +300,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		6E09D22D38FCA941CBBAF93A /* [CP] Check Pods Manifest.lock */ = {
@@ -299,7 +315,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		ACB54015354239CD07640BF9 /* [CP] Copy Pods Resources */ = {
@@ -314,7 +330,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GeometryUtilities-iOS/Pods-GeometryUtilities-iOS-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tests-iOS/Pods-Tests-iOS-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FF6878796AA39AA903E1B5DB /* [CP] Copy Pods Resources */ = {
@@ -329,7 +345,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GeometryUtilities-macOS/Pods-GeometryUtilities-macOS-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tests-macOS/Pods-Tests-macOS-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -433,7 +449,7 @@
 		};
 		13DB08451D96CFE400C14018 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6EDA3AE6DD9573F0B0695C46 /* Pods-GeometryUtilities-iOS.debug.xcconfig */;
+			baseConfigurationReference = 7E388EEA5B7A33042C4E66F7 /* Pods-Tests-iOS.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -484,7 +500,7 @@
 		};
 		13DB08461D96CFE400C14018 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 31F0622D2947C629E6F009CB /* Pods-GeometryUtilities-iOS.release.xcconfig */;
+			baseConfigurationReference = 32465D0A9B83646E6D4E8746 /* Pods-Tests-iOS.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -528,7 +544,7 @@
 		};
 		13DB08511D96CFF400C14018 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1B6D9232B0AD11C3AFA5FCD7 /* Pods-GeometryUtilities-macOS.debug.xcconfig */;
+			baseConfigurationReference = 655219EAC2C71D78D7EF8DA1 /* Pods-Tests-macOS.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -580,7 +596,7 @@
 		};
 		13DB08521D96CFF400C14018 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BBDD4A73B7B9CCFB959EC960 /* Pods-GeometryUtilities-macOS.release.xcconfig */;
+			baseConfigurationReference = C3402DC78D4EAA36606F5771 /* Pods-Tests-macOS.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;

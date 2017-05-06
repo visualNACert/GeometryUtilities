@@ -79,40 +79,6 @@ extension MKCoordinateRegion {
         self.init(center: center, span: span)
         
     }
-
-    /**
-     Creates a new `MKCoordinateRegion` equivalent to given `MinMaxLonLat`.
-     
-     - parameter minMaxLonLat: A `MinMaxLonLat`.
-     
-     - returns: Properly initialized instance.
-     
-     */
-    @available(*, introduced: 0.0.8, deprecated: 1.4.0, renamed: "init(minMaxLatLon:)")
-    public init(minMaxLonLat mmll: MinMaxLatLon) {
-        
-        let minCoordinate = CLLocationCoordinate2D(
-            latitude: mmll.minLat,
-            longitude: mmll.minLon
-        )
-        
-        let maxCoordinate = CLLocationCoordinate2D(
-            latitude: mmll.maxLat,
-            longitude: mmll.maxLon
-        )
-        
-        let center = (minCoordinate + maxCoordinate) / 2.0
-        
-        let delta = abs(maxCoordinate - minCoordinate)
-        
-        let span = MKCoordinateSpan(
-            latitudeDelta: delta.latitude,
-            longitudeDelta: delta.longitude
-        )
-        
-        self.init(center: center, span: span)
-        
-    }
     
     /// Min max lon lat equivalent to this instance.
     @available(*, introduced: 1.4)

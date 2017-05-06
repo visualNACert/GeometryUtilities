@@ -24,17 +24,6 @@ class MKCoordinateRegionZeroTest: XCTestCase {
         
     }
     
-    func test__zero_is_returned_deprecated() {
-        
-        let zero = MKCoordinateRegion.Zero
-        
-        expect(zero.center.latitude).to(equal(0))
-        expect(zero.center.longitude).to(equal(0))
-        expect(zero.span.latitudeDelta).to(equal(0))
-        expect(zero.span.longitudeDelta).to(equal(0))
-        
-    }
-    
     func test__zero_is_detected() {
         
         let zero = MKCoordinateRegion(

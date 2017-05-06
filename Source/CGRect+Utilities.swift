@@ -34,16 +34,12 @@ extension CGRect {
 
 	/// Point located at minimum X and Y values of this rect.
 	public var minPoint: CGPoint {
-		get {
-			return CGPoint(x: self.minX, y: self.minY)
-		}
+        return CGPoint(x: self.minX, y: self.minY)
 	}
 
 	/// Point located at maximum X and Y values of this rect.
 	public var maxPoint: CGPoint {
-		get {
-			return CGPoint(x: self.maxX, y: self.maxY)
-		}
+        return CGPoint(x: self.maxX, y: self.maxY)
 	}
 
 }

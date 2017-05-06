@@ -41,17 +41,5 @@ extension MKPolygon {
 		points.deinitialize(count: coordinates.count)
 
 	}
-    
-    /**
-     Creates a rectangular polygon covering given `MinMaxLonLat`.
-     
-     - parameter minMaxLonLat: `MinMaxLonLat` to be covered by polygon.
-     
-     - returns: Rectangular polygon covering given `MinMaxLonLat`.
-     */
-    @available(*, deprecated: 1.4.0, renamed: "init(minMaxLatLon:)")
-    public convenience init(minMaxLonLat: MinMaxLatLon) {
-        self.init(minMaxLatLon: minMaxLonLat)
-    }
 
 }
