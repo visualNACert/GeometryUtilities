@@ -2,3 +2,4 @@ Example/Podfile.lock
 Example/Pods
 **/*.xcworkspace
 **/xcuserdata
+docs
