@@ -14,7 +14,7 @@
     <a title="MKPolygon Extension Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">GeometryUtilities Docs</a> (92% documented)</p>
+        <p><a href="../index.html">GeometryUtilities Docs</a> (96% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -40,14 +40,6 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Constructors.html#/s:FE17GeometryUtilitiesCSo9MKPolygoncFT11coordinatesGSaVSC22CLLocationCoordinate2D__S0_">init(coordinates:)</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-group-name">
-            <a href="../Global Variables.html">Global Variables</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="../Global Variables.html#/s:v17GeometryUtilities26CLLocationCoordinate2DZeroVSC22CLLocationCoordinate2D">CLLocationCoordinate2DZero</a>
               </li>
             </ul>
           </li>
@@ -133,9 +125,6 @@
                 <a href="../Instance Variables.html#/s:vE17GeometryUtilitiesVSC17MKTileOverlayPath9bboxWGS84SS">bboxWGS84</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Instance Variables.html#/s:vV17GeometryUtilities12MultiPolygon8centroidT8latitudeSd9longitudeSd_">centroid</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Instance Variables.html#/s:vP17GeometryUtilities19MultiPolygonOverlay22complexShapePointCountSi">complexShapePointCount</a>
               </li>
               <li class="nav-group-task">
@@ -148,9 +137,6 @@
                 <a href="../Instance Variables.html#/s:vE17GeometryUtilitiesVSC18MKCoordinateRegion7mapRectVSC9MKMapRect">mapRect</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Instance Variables.html#/s:vV17GeometryUtilities12MultiPolygon3maxT8latitudeSd9longitudeSd_">max</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Instance Variables.html#/s:vE17GeometryUtilitiesVSC6CGRect8maxPointVSC7CGPoint">maxPoint</a>
               </li>
               <li class="nav-group-task">
@@ -160,13 +146,7 @@
                 <a href="../Instance Variables.html#/s:vE17GeometryUtilitiesVSC22CLLocationCoordinate2D9mercatorYSd">mercatorY</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Instance Variables.html#/s:vV17GeometryUtilities12MultiPolygon3minT8latitudeSd9longitudeSd_">min</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Instance Variables.html#/s:vE17GeometryUtilitiesVSC6CGRect8minPointVSC7CGPoint">minPoint</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Instance Variables.html#/s:vV17GeometryUtilities12MultiPolygon10pointCountSi">pointCount</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Instance Variables.html#/s:vC17GeometryUtilities20MultiPolygonRendererP33_CC60B649C150DD572484E2BED80123608polygonsGSaCSo9MKPolygon_">polygons</a>
@@ -196,22 +176,6 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Protocols/MultiPolygonOverlay.html">MultiPolygonOverlay</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-group-name">
-            <a href="../Static Variables.html">Static Variables</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="../Static Variables.html#/s:ZvE17GeometryUtilitiesVSC22CLLocationCoordinate2D4ZeroS0_">Zero</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-group-name">
-            <a href="../Structs.html">Structs</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="../Structs.html#/s:V17GeometryUtilities12MultiPolygon">MultiPolygon</a>
               </li>
             </ul>
           </li>
@@ -262,63 +226,6 @@
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">@available(* 1.2.0, *)</span>
 <span class="kd">public</span> <span class="kd">func</span> <span class="nf">polyPath</span><span class="p">(</span><span class="k">for</span> <span class="nv">renderer</span><span class="p">:</span> <span class="kt">MKOverlayPathRenderer</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGPath</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>renderer</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Renderer defining coordinate system
-where returned path will be drawn.</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>Path equivalent to this polygon in given renderer.</p>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:FE17GeometryUtilitiesCSo9MKPolygon8polyPathFT22forOverlayPathRendererCSo21MKOverlayPathRenderer_GSqCSo6CGPath_"></a>
-                    <a name="//apple_ref/swift/Method/polyPath(forOverlayPathRenderer:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FE17GeometryUtilitiesCSo9MKPolygon8polyPathFT22forOverlayPathRendererCSo21MKOverlayPathRenderer_GSqCSo6CGPath_">polyPath(forOverlayPathRenderer:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Returns a <code>CGPathRef</code> equivalent to this polygon in given renderer.</p>
-<div class="aside aside-note">
-    <p class="aside-title">Note</p>
-    <p><a href="http://stackoverflow.com/a/17673411">Source</a>.</p>
-
-</div>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">@available(*, deprecated: 1.2.0, renamed: "polyPath(for:)</span><span class="s">")
-public func polyPath(forOverlayPathRenderer renderer: MKOverlayPathRenderer) -&gt; CGPath?</span></code></pre>
 
                         </div>
                       </div>
@@ -458,58 +365,6 @@ or not.</p>
                     </section>
                   </div>
                 </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:FE17GeometryUtilitiesCSo9MKPolygon8containsFT18pointAtCoordinatesVSC22CLLocationCoordinate2D_Sb"></a>
-                    <a name="//apple_ref/swift/Method/contains(pointAtCoordinates:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FE17GeometryUtilitiesCSo9MKPolygon8containsFT18pointAtCoordinatesVSC22CLLocationCoordinate2D_Sb">contains(pointAtCoordinates:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Returns whether point at given coordinates is contained in this polygon
-or not.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">@available(*, deprecated: 1.4.0, renamed: "contains(pointAt:)</span><span class="s">")
-public func contains(pointAtCoordinates coordinates: CLLocationCoordinate2D) -&gt; Bool</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>coordinates</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Coordinates of point to be checked.</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p><code>true</code> if point is contained in this polygon.</p>
-                      </div>
-                    </section>
-                  </div>
-                </li>
               </ul>
             </div>
             <div class="task-group">
@@ -536,57 +391,6 @@ public func contains(pointAtCoordinates coordinates: CLLocationCoordinate2D) -&g
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">@available(* 1.4.0, *)</span>
 <span class="kd">public</span> <span class="n">convenience</span> <span class="nf">init</span><span class="p">(</span><span class="nv">minMaxLatLon</span><span class="p">:</span> <span class="kt">MinMaxLatLon</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>minMaxLonLat</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p><code>MinMaxLonLat</code> to be covered by polygon.</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>Rectangular polygon covering given <code>MinMaxLonLat</code>.</p>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:FE17GeometryUtilitiesCSo9MKPolygoncFT12minMaxLonLatVSC12MinMaxLatLon_S0_"></a>
-                    <a name="//apple_ref/swift/Method/init(minMaxLonLat:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FE17GeometryUtilitiesCSo9MKPolygoncFT12minMaxLonLatVSC12MinMaxLatLon_S0_">init(minMaxLonLat:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Creates a rectangular polygon covering given <code>MinMaxLonLat</code>.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">@available(*, deprecated: 1.4.0, renamed: "init(minMaxLatLon:)</span><span class="s">")
-public convenience init(minMaxLonLat: MinMaxLatLon)</span></code></pre>
 
                         </div>
                       </div>
