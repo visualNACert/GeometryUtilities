@@ -1,6 +1,6 @@
 //
 //  CLLocationCoordinate2D+BasicOperators.swift
-//  Example
+//  GeometryUtilities
 //
 //  Created by Lluís Ulzurrun de Asanza Sàez on 25/9/16.
 //
@@ -12,11 +12,20 @@ import Nimble
 
 class CLLocationCoordinate2DBasicOperatorsTest: XCTestCase {
 
-    func testEquality() {
+    func test__equality() {
         
-        let firstCoordinate = CLLocationCoordinate2D(latitude: 2.5, longitude: 3.7)
-        let secondCoordinate = CLLocationCoordinate2D(latitude: 2.5, longitude: 3.7)
-        let thirdCoordinate = CLLocationCoordinate2D(latitude: 3.7, longitude: 3.7)
+        let firstCoordinate = CLLocationCoordinate2D(
+            latitude: 2.5,
+            longitude: 3.7
+        )
+        let secondCoordinate = CLLocationCoordinate2D(
+            latitude: 2.5,
+            longitude: 3.7
+        )
+        let thirdCoordinate = CLLocationCoordinate2D(
+            latitude: 3.7,
+            longitude: 3.7
+        )
         
         expect(firstCoordinate).to(equal(secondCoordinate))
         expect(secondCoordinate).to(equal(firstCoordinate))
@@ -29,13 +38,19 @@ class CLLocationCoordinate2DBasicOperatorsTest: XCTestCase {
         
     }
     
-    func testCoordinateZero() {
+    func test__coordinateZero() {
+        expect(CLLocationCoordinate2D.zero).to(
+            equal(CLLocationCoordinate2D(latitude: 0, longitude: 0))
+        )
+    }
+    
+    func test__coordinateZero_deprecated() {
         expect(CLLocationCoordinate2D.Zero).to(
             equal(CLLocationCoordinate2D(latitude: 0, longitude: 0))
         )
     }
     
-    func testAbs() {
+    func test__abs() {
         
         expect(abs(CLLocationCoordinate2D(
             latitude: 2,
@@ -59,7 +74,7 @@ class CLLocationCoordinate2DBasicOperatorsTest: XCTestCase {
         
     }
 
-    func testAddition() {
+    func test__addition() {
         
         let firstCoordinate = CLLocationCoordinate2D(
             latitude: 2.764,
@@ -78,7 +93,7 @@ class CLLocationCoordinate2DBasicOperatorsTest: XCTestCase {
         
     }
     
-    func testSubtract() {
+    func test__subtract() {
         
         let firstCoordinate = CLLocationCoordinate2D(
             latitude: 2.764,
@@ -97,7 +112,7 @@ class CLLocationCoordinate2DBasicOperatorsTest: XCTestCase {
         
     }
     
-    func testDivideInteger() {
+    func test__divide_integer() {
         
         let coordinate = CLLocationCoordinate2D(
             latitude: 5,
@@ -110,7 +125,7 @@ class CLLocationCoordinate2DBasicOperatorsTest: XCTestCase {
         
     }
     
-    func testDivideDouble() {
+    func test__divide_double() {
      
         let coordinate = CLLocationCoordinate2D(
             latitude: 6.25,
@@ -122,7 +137,7 @@ class CLLocationCoordinate2DBasicOperatorsTest: XCTestCase {
         
     }
     
-    func testMultiplyInteger() {
+    func test__multiply_integer() {
         
         let coordinate = CLLocationCoordinate2D(
             latitude: 5,
@@ -135,7 +150,41 @@ class CLLocationCoordinate2DBasicOperatorsTest: XCTestCase {
         
     }
     
-    func testMultiplyDouble() {
+    func test__distance() {
+        
+        let start = CLLocationCoordinate2D(
+            latitude: 0,
+            longitude: 0
+        )
+        
+        let end = CLLocationCoordinate2D(
+            latitude: 4,
+            longitude: 3
+        )
+        
+        expect(start.distance(to: end)).to(beCloseTo(5, within: 0.1))
+        expect(end.distance(to: start)).to(beCloseTo(5, within: 0.1))
+        
+    }
+    
+    func test__distance_deprecated() {
+        
+        let start = CLLocationCoordinate2D(
+            latitude: 0,
+            longitude: 0
+        )
+        
+        let end = CLLocationCoordinate2D(
+            latitude: 4,
+            longitude: 3
+        )
+        
+        expect(start.distance(toCoordinate: end)).to(beCloseTo(5, within: 0.1))
+        expect(end.distance(toCoordinate: start)).to(beCloseTo(5, within: 0.1))
+        
+    }
+    
+    func test__multiply_double() {
         
         let coordinate = CLLocationCoordinate2D(
             latitude: 6.25,
@@ -147,7 +196,7 @@ class CLLocationCoordinate2DBasicOperatorsTest: XCTestCase {
         
     }
     
-    func testCentroid() {
+    func test__centroid() {
         
         let points = [(2, 7), (4, 3), (9, 2), (3.5, 2), (5, 5.5)].map {
             CLLocationCoordinate2D(latitude: $0, longitude: $1)
@@ -161,7 +210,7 @@ class CLLocationCoordinate2DBasicOperatorsTest: XCTestCase {
         
     }
     
-    func testInvalidCentroid() {
+    func test__invalid_centroid() {
         
         let points = [CLLocationCoordinate2D]()
         
@@ -172,4 +221,3 @@ class CLLocationCoordinate2DBasicOperatorsTest: XCTestCase {
     }
 
 }
-

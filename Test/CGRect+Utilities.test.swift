@@ -12,7 +12,7 @@ import Nimble
 
 class CGRectUtilitiesTest: XCTestCase {
     
-    func testCGRectCenterConstructor() {
+    func test__CGRect_center_constructor() {
         
         let rect = CGRect(
             center: CGPoint(x: 5, y: 7),
@@ -24,7 +24,7 @@ class CGRectUtilitiesTest: XCTestCase {
         
     }
     
-    func testCGRectMinPoint() {
+    func test__CGRect_minPoint() {
      
         let rect = CGRect(
             origin: CGPoint(x: 4, y: 9),
@@ -35,7 +35,7 @@ class CGRectUtilitiesTest: XCTestCase {
         
     }
     
-    func testCGRectMaxPoint() {
+    func test__CGRect_maxPoint() {
         
         let rect = CGRect(
             origin: CGPoint(x: 4, y: 9),
