@@ -9,9 +9,14 @@ Pod::Spec.new do |s|
   integrate both in `MapKit`.
                    DESC
 
-  s.homepage     = "http://visualnacert.com"
-  s.license      = { :type => "Propietary", :file => "LICENSE" }
-  s.author       = { "Lluís Ulzurrun de Asanza i Sàez" => "lulzurrun@visualnacert.com" }
+  s.homepage     = "https://github.com/visualNACert/GeometryUtilities"
+
+  s.license      = { :type => "LGPL2", :file => "LICENSE" }
+
+  s.authors       = {
+    "visualNACert team" => "",
+    "Lluís Ulzurrun de Asanza i Sàez" => "lulzurrun@visualnacert.com"
+  }
 
   s.ios.deployment_target = "8.0"
   s.osx.deployment_target = "10.10"
