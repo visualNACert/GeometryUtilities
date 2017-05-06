@@ -29,7 +29,7 @@ msg "Installing dependencies..."
 bundle install
 
 msg "Generating documentation..."
-bundle exec jazzy --podspec StringUtilities.podspec
+bundle exec jazzy --podspec GeometryUtilities.podspec
 
 # Switch to pages
 msg "Replacing documentation..."
