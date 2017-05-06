@@ -13,18 +13,19 @@ extension MKPolygon {
 	/**
 	 Creates a rectangular polygon covering given `MinMaxLonLat`.
 
-	 - parameter mmll: `MinMaxLonLat` to be covered by polygon.
+	 - parameter minMaxLonLat: `MinMaxLonLat` to be covered by polygon.
 
 	 - returns: Rectangular polygon covering given `MinMaxLonLat`.
 	 */
-	public convenience init(minMaxLatLon mmll: MinMaxLonLat) {
+    @available(*, introduced: 1.4.0)
+	public convenience init(minMaxLatLon: MinMaxLatLon) {
         
         let coordinates = [
-            (mmll.minLat, mmll.minLon),
-            (mmll.maxLat, mmll.minLon),
-            (mmll.maxLat, mmll.maxLon),
-            (mmll.minLat, mmll.maxLon),
-            (mmll.minLat, mmll.minLon)
+            (minMaxLatLon.minLat, minMaxLatLon.minLon),
+            (minMaxLatLon.maxLat, minMaxLatLon.minLon),
+            (minMaxLatLon.maxLat, minMaxLatLon.maxLon),
+            (minMaxLatLon.minLat, minMaxLatLon.maxLon),
+            (minMaxLatLon.minLat, minMaxLatLon.minLon)
         ].map { CLLocationCoordinate2D(latitude: $0.0, longitude: $0.1) }
         
         let points = UnsafeMutablePointer<CLLocationCoordinate2D>.allocate(
@@ -40,5 +41,17 @@ extension MKPolygon {
 		points.deinitialize(count: coordinates.count)
 
 	}
+    
+    /**
+     Creates a rectangular polygon covering given `MinMaxLonLat`.
+     
+     - parameter minMaxLonLat: `MinMaxLonLat` to be covered by polygon.
+     
+     - returns: Rectangular polygon covering given `MinMaxLonLat`.
+     */
+    @available(*, deprecated: 1.4.0, renamed: "init(minMaxLatLon:)")
+    public convenience init(minMaxLonLat: MinMaxLatLon) {
+        self.init(minMaxLatLon: minMaxLonLat)
+    }
 
 }

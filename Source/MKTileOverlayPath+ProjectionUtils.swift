@@ -35,7 +35,7 @@ extension MKTileOverlayPath {
 	public var bboxWGS84: String {
 		get {
 			let (left, right, bottom, top) = self.bboxWGS84Components
-			return "\(left),\(bottom),\(right),\(top)"
+            return String(format: "%g,%g,%g,%g", left, bottom, right, top)
 		}
 	}
 
@@ -63,7 +63,7 @@ extension MKTileOverlayPath {
 	public var bboxMercator: String {
 		get {
 			let (left, right, bottom, top) = self.bboxMercatorComponents
-			return "\(left),\(bottom),\(right),\(top)"
+            return String(format: "%g,%g,%g,%g", left, bottom, right, top)
 		}
 	}
 

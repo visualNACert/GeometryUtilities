@@ -10,22 +10,25 @@ import MapKit
 
 extension MKCoordinateRegion {
     
-    /// Returns a Zero coordinate region.
-    public static let Zero: MKCoordinateRegion = MKCoordinateRegionMake(
-        CLLocationCoordinate2D.Zero,
+    /// Returns a `(0, 0, 0, 0)` coordinate region.
+    @available(*, introduced: 1.4.0)
+    public static let zero: MKCoordinateRegion = MKCoordinateRegionMake(
+        CLLocationCoordinate2D.zero,
         MKCoordinateSpan(latitudeDelta: 0, longitudeDelta: 0)
     )
     
+    /// Returns a `(0, 0, 0, 0)` coordinate region.
+    @available(*, deprecated: 1.4.0, renamed: "zero")
+    public static let Zero: MKCoordinateRegion = MKCoordinateRegion.zero
+    
     /// Whether this coordinate region is centered at 0 with a zero size or not.
     public var isZero: Bool {
-        get {
-            return (
-                self.center.latitude == 0 &&
-                self.center.longitude == 0 &&
-                self.span.latitudeDelta == 0 &&
-                self.span.longitudeDelta == 0
-            )
-        }
+        return (
+            self.center.latitude == 0 &&
+            self.center.longitude == 0 &&
+            self.span.latitudeDelta == 0 &&
+            self.span.longitudeDelta == 0
+        )
     }
     
 }

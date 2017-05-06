@@ -12,9 +12,7 @@ extension MKMapSize {
 
 	/// Area of this size.
 	public var area: Double {
-		get {
-			return self.width * self.height
-		}
+        return self.width * self.height
 	}
 
 }

@@ -12,10 +12,10 @@ import CoreGraphics
 extension CGRect {
     /**
      Creates a new rect with given center and size.
-     
+
      - parameter center: Center of the rectangle.
      - parameter size: Size of the rectangle.
-     
+
      - returns: Properly initialized instance.
      */
     @available(*, introduced: 0.0.8)

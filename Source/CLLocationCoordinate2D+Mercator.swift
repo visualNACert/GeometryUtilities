@@ -9,14 +9,14 @@
 import MapKit
 
 extension CLLocationCoordinate2D {
-    
+
     /// Mercator X component of this coordinate.
     var mercatorX: Double {
         get {
             return self.longitude * 20037508.34 / 180;
         }
     }
-    
+
     /// Mercator Y component of this coordinate.
     var mercatorY: Double {
         get {
@@ -25,5 +25,5 @@ extension CLLocationCoordinate2D {
             ) / (.pi / 180) * 20037508.34 / 180;
         }
     }
-    
+
 }

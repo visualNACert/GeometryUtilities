@@ -12,14 +12,12 @@ extension MKMapRect {
 
 	/// Returns bounding box of this map rect as a string.
 	public var bbox: String {
-		get {
-            return [
-                MKMapRectGetMinX(self),
-                MKMapRectGetMinY(self),
-                MKMapRectGetMaxX(self),
-                MKMapRectGetMaxY(self)
-            ].map { "\($0)" }.joined(separator: ",")
-		}
+        return [
+            MKMapRectGetMinX(self),
+            MKMapRectGetMinY(self),
+            MKMapRectGetMaxX(self),
+            MKMapRectGetMaxY(self)
+        ].map { String(format: "%g", $0) }.joined(separator: ",")
 	}
 
 }

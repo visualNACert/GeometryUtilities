@@ -9,6 +9,7 @@
 import Foundation
 import StringUtilities
 
+@available(*, deprecated: 1.4)
 public struct MultiPolygon {
     
     /// Minimum point (lowest latitude and longitude) of this multi polygon.

@@ -10,7 +10,7 @@ import MapKit
 
 extension MKCoordinateRegion {
     
-    /// Map rect equivalent to this coordinte region.
+    /// Map rect equivalent to this coordinate region.
     public var mapRect: MKMapRect {
         get {
             
