@@ -35,8 +35,6 @@
 		136B67CC1EBDA6C40094A315 /* WKTParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136B67CA1EBDA6C10094A315 /* WKTParser.swift */; };
 		13DB08571D96D0A600C14018 /* CGRect+Utilities.test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DB08561D96D0A600C14018 /* CGRect+Utilities.test.swift */; };
 		13DB08581D96D0A600C14018 /* CGRect+Utilities.test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DB08561D96D0A600C14018 /* CGRect+Utilities.test.swift */; };
-		1723EAE9BED36844304ABB0F /* Pods_GeometryUtilities_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 043E17FCF32BC372565A8C75 /* Pods_GeometryUtilities_macOS.framework */; };
-		2A7F51C9A8B0942ABD8F3441 /* Pods_GeometryUtilities_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA7DAFD38373A823DA19267B /* Pods_GeometryUtilities_iOS.framework */; };
 		49867917AEE5DB5D015BC602 /* Pods_Tests_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AA990F8D4BC1F4177444EF9 /* Pods_Tests_iOS.framework */; };
 		ED7F5BDE303FC75E7EC0CC31 /* Pods_Tests_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48C3C71ABF16307598B6DBBE /* Pods_Tests_macOS.framework */; };
 /* End PBXBuildFile section */
@@ -77,7 +75,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A7F51C9A8B0942ABD8F3441 /* Pods_GeometryUtilities_iOS.framework in Frameworks */,
 				49867917AEE5DB5D015BC602 /* Pods_Tests_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -86,7 +83,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1723EAE9BED36844304ABB0F /* Pods_GeometryUtilities_macOS.framework in Frameworks */,
 				ED7F5BDE303FC75E7EC0CC31 /* Pods_Tests_macOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
