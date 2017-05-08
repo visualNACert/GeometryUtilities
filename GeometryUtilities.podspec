@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "GeometryUtilities"
-  s.version      = "2.0.0"
+  s.version      = "2.0.1"
   s.summary      = "A collection of utilities to handle geometry in WKT format"
 
   s.description  = <<-DESC
@@ -22,7 +22,7 @@ Pod::Spec.new do |s|
   s.osx.deployment_target = "10.10"
 
   s.source       = {
-  	:git => "git@bitbucket.org:vnac/geometryutilities.git",
+  	:git => "https://github.com/visualNACert/GeometryUtilities.git",
   	:tag => "#{s.version}"
   }
 

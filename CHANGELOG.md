@@ -1,3 +1,7 @@
+# 2.0.1
+
+- :bug: Fix repository specified in Podspec.
+
 # 2.0.0
 
 - :boom: Remove deprecated methods.
