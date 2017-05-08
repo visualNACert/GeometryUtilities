@@ -1,4 +1,3 @@
-source 'git@bitbucket.org:vnac/podsrepo.git'
 source 'https://github.com/CocoaPods/Specs.git'
 
 target 'Tests-iOS' do
