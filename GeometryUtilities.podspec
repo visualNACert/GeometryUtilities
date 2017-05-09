@@ -10,6 +10,7 @@ Pod::Spec.new do |s|
                    DESC
 
   s.homepage     = "https://github.com/visualNACert/GeometryUtilities"
+  s.documentation_url = "https://visualnacert.github.io/GeometryUtilities"
 
   s.license      = { :type => "LGPL2", :file => "LICENSE" }
 
