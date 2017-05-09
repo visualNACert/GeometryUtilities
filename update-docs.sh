@@ -29,7 +29,12 @@ msg "Installing dependencies..."
 bundle install
 
 msg "Generating documentation..."
-bundle exec jazzy --podspec GeometryUtilities.podspec
+bundle exec jazzy \
+	--podspec GeometryUtilities.podspec \
+	--theme fullwidth \
+	--github_url https://github.com/visualNACert/GeometryUtilities/ \
+	--root-url https://visualnacert.github.io/GeometryUtilities/ \
+	--dash-url https://visualnacert.github.io/GeometryUtilities/docsets/GeometryUtilities.docset
 
 # Switch to pages
 msg "Replacing documentation..."
