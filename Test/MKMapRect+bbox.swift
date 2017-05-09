@@ -15,6 +15,9 @@ class MKMapRectbboxTest: XCTestCase {
     
     func test__bbox() {
         
+        let zeroDecimalPattern = "(?:\\.?0\\d+)?"
+        let zeroDigitPattern = "0*"
+        
         expect(
             MKMapRect(
                 origin: MKMapPoint(
@@ -26,7 +29,11 @@ class MKMapRectbboxTest: XCTestCase {
                     height: 0.6
                 )
             ).bbox
-        ).to(equal("1,2,1.5,2.6"))
+        ).to(match(String(
+            format:"1%1$@,2%1$@,1.5%2$@,2.6%2$@",
+            zeroDecimalPattern,
+            zeroDigitPattern
+        )))
         
         expect(
             MKMapRect(
@@ -39,7 +46,10 @@ class MKMapRectbboxTest: XCTestCase {
                     height: 2
                 )
             ).bbox
-        ).to(equal("1.1,2.2,2.1,4.2"))
+        ).to(match(String(
+            format:"1.1%1$@,2.2%1$@,2.1%1$@,4.2%1$@",
+            zeroDigitPattern
+        )))
         
     }
     

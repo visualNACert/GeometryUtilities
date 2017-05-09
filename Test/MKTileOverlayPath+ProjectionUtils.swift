@@ -23,11 +23,11 @@ class MKTileOverlayPathProjectionUtilsTest: XCTestCase {
         )
         
         let expected = [
-            -0.33371,
-            39.5882,
+            -0.333710,
+            39.588228,
             -0.333023,
-            39.5888
-        ].map { String(format: "%g", $0) }.joined(separator: ",")
+            39.588757
+        ].map { String(format: "%f", $0) }.joined(separator: ",")
         
         expect(tileOverlayPath.bboxWGS84).to(equal(expected))
         
@@ -47,7 +47,7 @@ class MKTileOverlayPathProjectionUtilsTest: XCTestCase {
             4806283.90087456,
             -37071.95871315,
             4806360.33790283
-        ].map { String(format: "%g", $0) }.joined(separator: ",")
+        ].map { String(format: "%f", $0) }.joined(separator: ",")
         
         expect(tileOverlayPath.bboxMercator).to(equal(expected))
         
