@@ -34,7 +34,7 @@ bundle exec jazzy \
 	--theme fullwidth \
 	--github_url https://github.com/visualNACert/GeometryUtilities/ \
 	--root-url https://visualnacert.github.io/GeometryUtilities/ \
-	--dash-url https://visualnacert.github.io/GeometryUtilities/docsets/GeometryUtilities.docset
+	--dash-url https://visualnacert.github.io/GeometryUtilities/docsets/GeometryUtilities.xml
 
 # Switch to pages
 msg "Replacing documentation..."

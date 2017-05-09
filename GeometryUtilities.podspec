@@ -9,12 +9,12 @@ Pod::Spec.new do |s|
   integrate both in `MapKit`.
                    DESC
 
-  s.homepage     = "https://github.com/visualNACert/GeometryUtilities"
+  s.homepage          = "https://github.com/visualNACert/GeometryUtilities"
   s.documentation_url = "https://visualnacert.github.io/GeometryUtilities"
 
   s.license      = { :type => "LGPL2", :file => "LICENSE" }
 
-  s.authors       = {
+  s.authors      = {
     "visualNACert team" => "",
     "Lluís Ulzurrun de Asanza i Sàez" => "lulzurrun@visualnacert.com"
   }
