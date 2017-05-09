@@ -1,3 +1,7 @@
+# 2.1.1
+
+- :bug: Fix bug in `bbox` methods which sometimes used scientific notation.
+
 # 2.1.0
 
 - :sparkles: Add `BaseMultiPolygonOverlay`.
