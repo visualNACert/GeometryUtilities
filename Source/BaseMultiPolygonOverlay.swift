@@ -35,26 +35,34 @@ open class BaseMultiPolygonOverlay: NSObject, MultiPolygonOverlay {
      Creates a new instance with given WKT string with polygons to be displayed
      as a single one.
      
+     - parameter uniqueIdentifier: Unique identifier of this overlay. When `nil`
+     hash of given WKT string will be used as unique identifier.
      - parameter wkt: WKT string with serialized polygons to be displayed by 
      this overlay.
      
      - returns: Properly initialized instance of `nil` when given WKT string has
      no polygons or is invalid.
      */
-    public convenience init?(wkt: String) {
-        self.init(polygons: WKT.polygons(in: wkt))
+    public convenience init?(uniqueIdentifier: String? = nil, wkt: String) {
+        self.init(
+            uniqueIdentifier: uniqueIdentifier,
+            polygons: WKT.polygons(in: wkt)
+        )
     }
     
     /**
      Creates a new instance with given collection of polygons to be displayed
      as a single one.
      
+     - parameter uniqueIdentifier: Unique identifier of this overlay. When `nil`
+     hash of WKT representation of given polygons will be used as unique 
+     identifier.
      - parameter polygons: Polygons to be displayed by this overlay.
      
      - returns: Properly initialized instance of `nil` when given collection is
      empty.
      */
-    public init?(polygons: [MKPolygon]) {
+    public init?(uniqueIdentifier: String? = nil, polygons: [MKPolygon]) {
         
         guard let mmll = polygons.minMaxLatLon() else { return nil }
         
@@ -63,7 +71,7 @@ open class BaseMultiPolygonOverlay: NSObject, MultiPolygonOverlay {
         self.polygons = polygons
         self.complexShapePointCount = polygons.reduce(0) { $0 + $1.pointCount }
         self.simplifiedPolygon = MKPolygon(minMaxLatLon: mmll)
-        self.uniqueIdentifier = String(
+        self.uniqueIdentifier = uniqueIdentifier ?? String(
             format: "%d",
             polygons.wktMultipolygonString().hashValue
         )

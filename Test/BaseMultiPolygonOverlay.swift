@@ -15,13 +15,28 @@ class BaseMultiPolygonOverlayTest: XCTestCase {
     
     func test__wkt_constructor() {
         
-        let overlay = BaseMultiPolygonOverlay(
-            wkt: "MULTIPOLYGON(((30 20, 45 40, 10 40, 30 20)), ((15 5, 40 10, 10 20, 5 10, 15 5)))"
-        )
+        let wkt = "MULTIPOLYGON(((30 20, 45 40, 10 40, 30 20)), ((15 5, 40 10, 10 20, 5 10, 15 5)))"
+        
+        let overlay = BaseMultiPolygonOverlay(wkt: wkt)
         
         expect(overlay).toNot(beNil())
         expect(overlay!.polygons).to(haveCount(2))
         expect(overlay!.simplifiedShapePointCount).to(equal(5))
+        
+    }
+    
+    func test__wkt_constructor_custom_unique_identifier() {
+        
+        let wkt = "MULTIPOLYGON(((30 20, 45 40, 10 40, 30 20)), ((15 5, 40 10, 10 20, 5 10, 15 5)))"
+        
+        let uid = "demo-uid"
+        
+        let overlay = BaseMultiPolygonOverlay(uniqueIdentifier: uid, wkt: wkt)
+        
+        expect(overlay).toNot(beNil())
+        expect(overlay!.polygons).to(haveCount(2))
+        expect(overlay!.simplifiedShapePointCount).to(equal(5))
+        expect(overlay!.uniqueIdentifier).to(equal(uid))
         
     }
     
