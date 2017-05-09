@@ -1,3 +1,8 @@
+# 2.1.0
+
+- :sparkles: Add `BaseMultiPolygonOverlay`.
+- :sparkles: Add `minMaxLatLon` method to collections of `CLLocationCoordinate2D` and `MKPolygon`.
+
 # 2.0.1
 
 - :bug: Fix repository specified in Podspec.
