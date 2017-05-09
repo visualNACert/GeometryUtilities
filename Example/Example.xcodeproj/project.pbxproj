@@ -11,6 +11,8 @@
 		13443AF51D981F2D00B28A63 /* CLLocationCoordinate2D+BasicOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13443AF31D981F2D00B28A63 /* CLLocationCoordinate2D+BasicOperators.swift */; };
 		134B12C31EC1A70E009FC142 /* MinMaxLatLon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134B12C21EC1A70E009FC142 /* MinMaxLatLon.swift */; };
 		134B12C41EC1A70E009FC142 /* MinMaxLatLon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134B12C21EC1A70E009FC142 /* MinMaxLatLon.swift */; };
+		134B12C61EC1ACD9009FC142 /* BaseMultiPolygonOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134B12C51EC1ACD9009FC142 /* BaseMultiPolygonOverlay.swift */; };
+		134B12C71EC1ACD9009FC142 /* BaseMultiPolygonOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134B12C51EC1ACD9009FC142 /* BaseMultiPolygonOverlay.swift */; };
 		136B67A81EBC75B40094A315 /* CLLocationCoordinate2D+Zero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136B67A71EBC75B40094A315 /* CLLocationCoordinate2D+Zero.swift */; };
 		136B67A91EBC75B40094A315 /* CLLocationCoordinate2D+Zero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136B67A71EBC75B40094A315 /* CLLocationCoordinate2D+Zero.swift */; };
 		136B67AB1EBC764E0094A315 /* MKCoordinateRegion+isValid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136B67AA1EBC764E0094A315 /* MKCoordinateRegion+isValid.swift */; };
@@ -45,6 +47,7 @@
 		043E17FCF32BC372565A8C75 /* Pods_GeometryUtilities_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeometryUtilities_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		13443AF31D981F2D00B28A63 /* CLLocationCoordinate2D+BasicOperators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CLLocationCoordinate2D+BasicOperators.swift"; path = "../Test/CLLocationCoordinate2D+BasicOperators.swift"; sourceTree = "<group>"; };
 		134B12C21EC1A70E009FC142 /* MinMaxLatLon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MinMaxLatLon.swift; path = ../Test/MinMaxLatLon.swift; sourceTree = "<group>"; };
+		134B12C51EC1ACD9009FC142 /* BaseMultiPolygonOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseMultiPolygonOverlay.swift; path = ../Test/BaseMultiPolygonOverlay.swift; sourceTree = "<group>"; };
 		136B67A71EBC75B40094A315 /* CLLocationCoordinate2D+Zero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CLLocationCoordinate2D+Zero.swift"; path = "../Test/CLLocationCoordinate2D+Zero.swift"; sourceTree = "<group>"; };
 		136B67AA1EBC764E0094A315 /* MKCoordinateRegion+isValid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "MKCoordinateRegion+isValid.swift"; path = "../Test/MKCoordinateRegion+isValid.swift"; sourceTree = "<group>"; };
 		136B67AD1EBC91510094A315 /* MKCoordinate+MinMaxLatLon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "MKCoordinate+MinMaxLatLon.swift"; path = "../Test/MKCoordinate+MinMaxLatLon.swift"; sourceTree = "<group>"; };
@@ -128,6 +131,7 @@
 				136B67C11EBCDC930094A315 /* MKPolygon+MinMaxLatLon.swift */,
 				136B67C41EBCDE030094A315 /* MKTileOverlayPath+ProjectionUtils.swift */,
 				136B67C71EBCE2D90094A315 /* MKPolygon+WKT.swift */,
+				134B12C51EC1ACD9009FC142 /* BaseMultiPolygonOverlay.swift */,
 				134B12C21EC1A70E009FC142 /* MinMaxLatLon.swift */,
 				136B67CA1EBDA6C10094A315 /* WKTParser.swift */,
 			);
@@ -363,6 +367,7 @@
 				13443AF41D981F2D00B28A63 /* CLLocationCoordinate2D+BasicOperators.swift in Sources */,
 				134B12C31EC1A70E009FC142 /* MinMaxLatLon.swift in Sources */,
 				136B67AE1EBC91510094A315 /* MKCoordinate+MinMaxLatLon.swift in Sources */,
+				134B12C61EC1ACD9009FC142 /* BaseMultiPolygonOverlay.swift in Sources */,
 				136B67BF1EBCD6110094A315 /* MKPolygon+Coordinates.swift in Sources */,
 				13DB08571D96D0A600C14018 /* CGRect+Utilities.test.swift in Sources */,
 				136B67C51EBCDE030094A315 /* MKTileOverlayPath+ProjectionUtils.swift in Sources */,
@@ -385,6 +390,7 @@
 				13443AF51D981F2D00B28A63 /* CLLocationCoordinate2D+BasicOperators.swift in Sources */,
 				134B12C41EC1A70E009FC142 /* MinMaxLatLon.swift in Sources */,
 				136B67AF1EBC91510094A315 /* MKCoordinate+MinMaxLatLon.swift in Sources */,
+				134B12C71EC1ACD9009FC142 /* BaseMultiPolygonOverlay.swift in Sources */,
 				136B67C01EBCD6110094A315 /* MKPolygon+Coordinates.swift in Sources */,
 				13DB08581D96D0A600C14018 /* CGRect+Utilities.test.swift in Sources */,
 				136B67C61EBCDE030094A315 /* MKTileOverlayPath+ProjectionUtils.swift in Sources */,
