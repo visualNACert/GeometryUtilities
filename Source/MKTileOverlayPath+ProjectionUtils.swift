@@ -31,7 +31,7 @@ extension MKTileOverlayPath {
     /// Bounding box of this overlay path using WGS84 coordinate system.
 	public var bboxWGS84: String {
         let (left, right, bottom, top) = self.bboxWGS84Components
-        return String(format: "%g,%g,%g,%g", left, bottom, right, top)
+        return String(format: "%f,%f,%f,%f", left, bottom, right, top)
 	}
 
 	fileprivate var bboxMercatorComponents: (Double, Double, Double, Double) {
@@ -55,7 +55,7 @@ extension MKTileOverlayPath {
     /// Bounding box of this overlay path using Mercator projection.
 	public var bboxMercator: String {
         let (left, right, bottom, top) = self.bboxMercatorComponents
-        return String(format: "%g,%g,%g,%g", left, bottom, right, top)
+        return String(format: "%f,%f,%f,%f", left, bottom, right, top)
 	}
 
 }

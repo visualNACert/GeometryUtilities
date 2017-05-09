@@ -16,7 +16,7 @@ extension MKMapRect {
             MKMapRectGetMinY(self),
             MKMapRectGetMaxX(self),
             MKMapRectGetMaxY(self)
-        ].map { String(format: "%g", $0) }.joined(separator: ",")
+        ].map { String(format: "%f", $0) }.joined(separator: ",")
 	}
 
 }
