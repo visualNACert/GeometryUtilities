@@ -42,3 +42,23 @@ extension MKPolygon {
 	}
 
 }
+
+extension Collection where Iterator.Element == MKPolygon {
+    
+    /**
+     Returns `MinMaxLonLat` covered by polygons in this collection.
+     
+     - returns: `MinMaxLonLat` covered by polygons in this collection. `nil` iff
+     collection has no polygons.
+     */
+    public func minMaxLatLon() -> MinMaxLatLon? {
+        
+        let coordinates = self
+            .map { $0.coordinates() }
+            .joined()
+        
+        return coordinates.minMaxLatLon()
+        
+    }
+    
+}

@@ -72,5 +72,112 @@ class MKPolygonMinMaxLatLonTest: XCTestCase {
         }
         
     }
+    
+    func test__collection_single_polygon() {
+    
+        let polygonA = MKPolygon(
+            coordinates: [
+                CLLocationCoordinate2D(
+                    latitude: 0,
+                    longitude: 0
+                ),
+                CLLocationCoordinate2D(
+                    latitude: 1,
+                    longitude: 0
+                ),
+                CLLocationCoordinate2D(
+                    latitude: 1,
+                    longitude: 1
+                ),
+                CLLocationCoordinate2D(
+                    latitude: 0,
+                    longitude: 1
+                )
+            ]
+        )
+        
+        let collection = [polygonA]
+        
+        let mmll = collection.minMaxLatLon()
+        
+        expect(mmll).toNot(beNil())
+        
+        expect(mmll!.minLat).to(beCloseTo(0, within: 0.1))
+        expect(mmll!.minLon).to(beCloseTo(0, within: 0.1))
+        expect(mmll!.maxLat).to(beCloseTo(1, within: 0.1))
+        expect(mmll!.maxLon).to(beCloseTo(1, within: 0.1))
+        expect(mmll!.centroidLat).to(beCloseTo(0.5, within: 0.1))
+        expect(mmll!.centroidLon).to(beCloseTo(0.5, within: 0.1))
+        expect(mmll!.pointCount).to(equal(4))
+        
+    }
+    
+    func test__collection_single_multiple_polygon_() {
+        
+        let polygonA = MKPolygon(
+            coordinates: [
+                CLLocationCoordinate2D(
+                    latitude: 0,
+                    longitude: 0
+                ),
+                CLLocationCoordinate2D(
+                    latitude: 1,
+                    longitude: 0
+                ),
+                CLLocationCoordinate2D(
+                    latitude: 1,
+                    longitude: 1
+                ),
+                CLLocationCoordinate2D(
+                    latitude: 0,
+                    longitude: 1
+                )
+            ]
+        )
+        
+        let polygonB = MKPolygon(
+            coordinates: [
+                CLLocationCoordinate2D(
+                    latitude: 6,
+                    longitude: 8
+                ),
+                CLLocationCoordinate2D(
+                    latitude: 9,
+                    longitude: 10
+                ),
+                CLLocationCoordinate2D(
+                    latitude: 11,
+                    longitude: 7
+                ),
+                CLLocationCoordinate2D(
+                    latitude: 6,
+                    longitude: 8
+                )
+            ]
+        )
+        
+        let collection = [polygonA, polygonB]
+        
+        let mmll = collection.minMaxLatLon()
+        
+        expect(mmll).toNot(beNil())
+        
+        expect(mmll!.minLat).to(beCloseTo(0, within: 0.1))
+        expect(mmll!.minLon).to(beCloseTo(0, within: 0.1))
+        expect(mmll!.maxLat).to(beCloseTo(11, within: 0.1))
+        expect(mmll!.maxLon).to(beCloseTo(10, within: 0.1))
+        expect(mmll!.centroidLat).to(beCloseTo(4.25, within: 0.1))
+        expect(mmll!.centroidLon).to(beCloseTo(4.375, within: 0.1))
+        expect(mmll!.pointCount).to(equal(8))
+        
+    }
+    
+    func test__collection_empty() {
+        
+        let collection = [MKPolygon]()
+        
+        expect(collection.minMaxLatLon()).to(beNil())
+        
+    }
 
 }

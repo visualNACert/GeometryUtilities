@@ -196,5 +196,35 @@ class CLLocationCoordinate2DBasicOperatorsTest: XCTestCase {
         expect(CLLocationCoordinate2DIsValid(centroid)).to(beFalse())
         
     }
+    
+    func test__minMaxLatLon() {
+        
+        let points = [(2, 7), (4, 3), (9, 2), (3.5, 2), (5, 5.5)].map {
+            CLLocationCoordinate2D(latitude: $0, longitude: $1)
+        }
+        
+        let mmll = points.minMaxLatLon()
+        
+        expect(mmll).toNot(beNil())
+        
+        expect(mmll!.minLat).to(beCloseTo(2, within: 0.1))
+        expect(mmll!.minLon).to(beCloseTo(2, within: 0.1))
+        expect(mmll!.maxLat).to(beCloseTo(9, within: 0.1))
+        expect(mmll!.maxLon).to(beCloseTo(7, within: 0.1))
+        expect(mmll!.centroidLat).to(beCloseTo(4.7, within: 0.1))
+        expect(mmll!.centroidLon).to(beCloseTo(3.9, within: 0.1))
+        expect(mmll!.pointCount).to(equal(5))
+        
+    }
+    
+    func test__invalid_minMaxLatLon() {
+        
+        let points = [CLLocationCoordinate2D]()
+        
+        let mmll = points.minMaxLatLon()
+        
+        expect(mmll).to(beNil())
+        
+    }
 
 }

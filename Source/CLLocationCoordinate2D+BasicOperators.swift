@@ -118,7 +118,11 @@ extension CLLocationCoordinate2D {
 }
 
 extension Collection
-where Iterator.Element == CLLocationCoordinate2D, Self.IndexDistance == Int {
+where
+    Iterator.Element == CLLocationCoordinate2D,
+    IndexDistance == Int,
+    SubSequence.Iterator.Element == CLLocationCoordinate2D
+{
 
 	/**
 	 Returns centroid of polygon with this list of coordinates.
@@ -129,5 +133,39 @@ where Iterator.Element == CLLocationCoordinate2D, Self.IndexDistance == Int {
 		guard self.count > 0 else { return kCLLocationCoordinate2DInvalid }
 		return self.reduce(CLLocationCoordinate2D.zero) { $0 + $1 } / self.count
 	}
-
+    
+    /**
+     Returns `MinMaxLonLat` of this collection's coordinates.
+     
+     - returns: `MinMaxLonLat` of this collection's coordinates. Will return
+     `nil` iff there are no coordinates in this collection.
+     */
+    public func minMaxLatLon() -> MinMaxLatLon? {
+        
+        guard let first = self.first else { return nil }
+        
+        let tail = self.dropFirst()
+        
+        let latitudes = tail.map { $0.latitude }
+        let longitudes = tail.map { $0.longitude }
+        
+        let minLat = latitudes.reduce(first.latitude, Swift.min)
+        let minLon = longitudes.reduce(first.longitude, Swift.min)
+        let maxLat = latitudes.reduce(first.latitude, Swift.max)
+        let maxLon = longitudes.reduce(first.longitude, Swift.max)
+        
+        let centroid = self.centroid()
+        
+        return MinMaxLatLon(
+            minLat: minLat,
+            minLon: minLon,
+            maxLat: maxLat,
+            maxLon: maxLon,
+            centroidLat: centroid.latitude,
+            centroidLon: centroid.longitude,
+            pointCount: Int32(self.count)
+        )
+        
+    }
+    
 }
