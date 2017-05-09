@@ -1,47 +1,47 @@
 {
   "warnings": [
     {
-      "file": "/private/var/folders/7d/3yqwd7wj5sb5k7bktr22y4tr0000gn/T/tmp.fvZ6Ye4Q/Source/MultiPolygonOverlay.swift",
+      "file": "/private/var/folders/7d/3yqwd7wj5sb5k7bktr22y4tr0000gn/T/tmp.rRrmsCSI/Source/MultiPolygonOverlay.swift",
       "line": null,
       "symbol": "MultiPolygonOverlay",
       "symbol_kind": "source.lang.swift.decl.protocol",
       "warning": "undocumented"
     },
     {
-      "file": "/private/var/folders/7d/3yqwd7wj5sb5k7bktr22y4tr0000gn/T/tmp.fvZ6Ye4Q/Source/MultiPolygonOverlay.swift",
+      "file": "/private/var/folders/7d/3yqwd7wj5sb5k7bktr22y4tr0000gn/T/tmp.rRrmsCSI/Source/MultiPolygonOverlay.swift",
       "line": null,
       "symbol": "MultiPolygonOverlay",
       "symbol_kind": "source.lang.swift.decl.protocol",
       "warning": "undocumented"
     },
     {
-      "file": "/private/var/folders/7d/3yqwd7wj5sb5k7bktr22y4tr0000gn/T/tmp.fvZ6Ye4Q/Source/MultiPolygonRenderer.swift",
+      "file": "/private/var/folders/7d/3yqwd7wj5sb5k7bktr22y4tr0000gn/T/tmp.rRrmsCSI/Source/MultiPolygonRenderer.swift",
       "line": null,
       "symbol": "MultiPolygonRenderer",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/private/var/folders/7d/3yqwd7wj5sb5k7bktr22y4tr0000gn/T/tmp.fvZ6Ye4Q/Source/MultiPolygonRenderer.swift",
+      "file": "/private/var/folders/7d/3yqwd7wj5sb5k7bktr22y4tr0000gn/T/tmp.rRrmsCSI/Source/MultiPolygonRenderer.swift",
       "line": null,
       "symbol": "MultiPolygonRenderer",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/private/var/folders/7d/3yqwd7wj5sb5k7bktr22y4tr0000gn/T/tmp.fvZ6Ye4Q/Source/MultiPolygonRenderer.swift",
+      "file": "/private/var/folders/7d/3yqwd7wj5sb5k7bktr22y4tr0000gn/T/tmp.rRrmsCSI/Source/MultiPolygonRenderer.swift",
       "line": null,
       "symbol": "MultiPolygonRenderer.draw(_:zoomScale:in:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/private/var/folders/7d/3yqwd7wj5sb5k7bktr22y4tr0000gn/T/tmp.fvZ6Ye4Q/Source/MultiPolygonRenderer.swift",
+      "file": "/private/var/folders/7d/3yqwd7wj5sb5k7bktr22y4tr0000gn/T/tmp.rRrmsCSI/Source/MultiPolygonRenderer.swift",
       "line": null,
       "symbol": "MultiPolygonRenderer.draw(_:zoomScale:in:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     }
   ],
-  "source_directory": "/private/var/folders/7d/3yqwd7wj5sb5k7bktr22y4tr0000gn/T/tmp.fvZ6Ye4Q"
+  "source_directory": "/private/var/folders/7d/3yqwd7wj5sb5k7bktr22y4tr0000gn/T/tmp.rRrmsCSI"
 }
