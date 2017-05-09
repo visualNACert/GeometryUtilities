@@ -1,9 +1,8 @@
 //
 //  MKPolygon+Coordinates.swift
-//  Pods
+//  GeometryUtilities
 //
 //  Created by Lluís Ulzurrun on 31/10/16.
-//
 //
 
 import MapKit

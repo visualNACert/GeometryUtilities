@@ -1,9 +1,8 @@
 //
 //  MKCoordinateRegion+Zero.swift
-//  Pods
+//  GeometryUtilities
 //
 //  Created by Lluís Ulzurrun de Asanza Sàez on 24/11/16.
-//
 //
 
 import MapKit

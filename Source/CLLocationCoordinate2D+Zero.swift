@@ -1,9 +1,8 @@
 //
 //  CLLocationCoordinate2D+Zero.swift
-//  Pods
+//  GeometryUtilities
 //
 //  Created by Lluís Ulzurrun de Asanza Sàez on 25/11/16.
-//
 //
 
 import MapKit
