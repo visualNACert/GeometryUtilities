@@ -37,6 +37,8 @@
 		136B67C91EBCE2D90094A315 /* MKPolygon+WKT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136B67C71EBCE2D90094A315 /* MKPolygon+WKT.swift */; };
 		136B67CB1EBDA6C10094A315 /* WKTParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136B67CA1EBDA6C10094A315 /* WKTParser.swift */; };
 		136B67CC1EBDA6C40094A315 /* WKTParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136B67CA1EBDA6C10094A315 /* WKTParser.swift */; };
+		1398FA441ED2EA73006C05CC /* CLLocationCoordinate2D+Area.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1398FA431ED2EA73006C05CC /* CLLocationCoordinate2D+Area.swift */; };
+		1398FA451ED2EA73006C05CC /* CLLocationCoordinate2D+Area.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1398FA431ED2EA73006C05CC /* CLLocationCoordinate2D+Area.swift */; };
 		13DB08571D96D0A600C14018 /* CGRect+Utilities.test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DB08561D96D0A600C14018 /* CGRect+Utilities.test.swift */; };
 		13DB08581D96D0A600C14018 /* CGRect+Utilities.test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DB08561D96D0A600C14018 /* CGRect+Utilities.test.swift */; };
 		49867917AEE5DB5D015BC602 /* Pods_Tests_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AA990F8D4BC1F4177444EF9 /* Pods_Tests_iOS.framework */; };
@@ -60,6 +62,7 @@
 		136B67C41EBCDE030094A315 /* MKTileOverlayPath+ProjectionUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "MKTileOverlayPath+ProjectionUtils.swift"; path = "../Test/MKTileOverlayPath+ProjectionUtils.swift"; sourceTree = "<group>"; };
 		136B67C71EBCE2D90094A315 /* MKPolygon+WKT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "MKPolygon+WKT.swift"; path = "../Test/MKPolygon+WKT.swift"; sourceTree = "<group>"; };
 		136B67CA1EBDA6C10094A315 /* WKTParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WKTParser.swift; path = ../Test/WKTParser.swift; sourceTree = "<group>"; };
+		1398FA431ED2EA73006C05CC /* CLLocationCoordinate2D+Area.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CLLocationCoordinate2D+Area.swift"; path = "../Test/CLLocationCoordinate2D+Area.swift"; sourceTree = "<group>"; };
 		13DB083E1D96CFE400C14018 /* Tests-iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests-iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		13DB084B1D96CFF400C14018 /* Tests-macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests-macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		13DB08561D96D0A600C14018 /* CGRect+Utilities.test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CGRect+Utilities.test.swift"; path = "../Test/CGRect+Utilities.test.swift"; sourceTree = "<group>"; };
@@ -121,6 +124,7 @@
 				13DB08561D96D0A600C14018 /* CGRect+Utilities.test.swift */,
 				13443AF31D981F2D00B28A63 /* CLLocationCoordinate2D+BasicOperators.swift */,
 				136B67A71EBC75B40094A315 /* CLLocationCoordinate2D+Zero.swift */,
+				1398FA431ED2EA73006C05CC /* CLLocationCoordinate2D+Area.swift */,
 				136B67AA1EBC764E0094A315 /* MKCoordinateRegion+isValid.swift */,
 				136B67AD1EBC91510094A315 /* MKCoordinate+MinMaxLatLon.swift */,
 				136B67B01EBC99780094A315 /* MKCoordinateRegion+MapRect.swift */,
@@ -370,6 +374,7 @@
 				134B12C61EC1ACD9009FC142 /* BaseMultiPolygonOverlay.swift in Sources */,
 				136B67BF1EBCD6110094A315 /* MKPolygon+Coordinates.swift in Sources */,
 				13DB08571D96D0A600C14018 /* CGRect+Utilities.test.swift in Sources */,
+				1398FA441ED2EA73006C05CC /* CLLocationCoordinate2D+Area.swift in Sources */,
 				136B67C51EBCDE030094A315 /* MKTileOverlayPath+ProjectionUtils.swift in Sources */,
 				136B67B61EBCC67D0094A315 /* MKCoordinateRegion+Zero.swift in Sources */,
 				136B67B11EBC99780094A315 /* MKCoordinateRegion+MapRect.swift in Sources */,
@@ -393,6 +398,7 @@
 				134B12C71EC1ACD9009FC142 /* BaseMultiPolygonOverlay.swift in Sources */,
 				136B67C01EBCD6110094A315 /* MKPolygon+Coordinates.swift in Sources */,
 				13DB08581D96D0A600C14018 /* CGRect+Utilities.test.swift in Sources */,
+				1398FA451ED2EA73006C05CC /* CLLocationCoordinate2D+Area.swift in Sources */,
 				136B67C61EBCDE030094A315 /* MKTileOverlayPath+ProjectionUtils.swift in Sources */,
 				136B67B71EBCC67D0094A315 /* MKCoordinateRegion+Zero.swift in Sources */,
 				136B67B21EBC99780094A315 /* MKCoordinateRegion+MapRect.swift in Sources */,
