@@ -1,6 +1,6 @@
 //
-//  GeometryUtilities+CLLocationCoordinate2D.swift
-//  Visual
+//  CLLocationCoordinate2D+Area.swift
+//  GeometryUtilities
 //
 //  Created by Pablo Guardiola on 17/05/2017.
 //  Copyright © 2017 VisualNACert. All rights reserved.
@@ -9,29 +9,40 @@
 import Foundation
 import MapKit
 
-extension Array where Element == CLLocationCoordinate2D {
+extension BidirectionalCollection where Iterator.Element == CLLocationCoordinate2D, IndexDistance == Int {
     
     /*
-     Calculates the area (in Ha) from a coordinate array
+     Calculates the area covered by coordinates in this collection.
+     
+     - returns: Area in hectometers (**Ha**).
      */
-    
     public func area() -> Double {
-        guard self.count > 2 else { return 0 }
-        var area = 0.0
         
-        for i in 0..<self.count {
-            let p1 = self[i > 0 ? i - 1 : self.count - 1]
-            let p2 = self[i]
-            
-            area += (p1.latitude * p2.longitude) - (p1.longitude * p2.latitude)
+        precondition(
+            self.count > 2,
+            "At least 3 coordinates are required to define an area"
+        )
+        
+        guard let last = self.last else {
+            fatalError("Collection's `last` must not be `nil`")
         }
-        area = area / 2.0
         
-        area = area * 111 //degree to Km
-        area = abs(area) //Absolute value
+        // TODO: Implement proper algorithm
         
-        let areaHa = area * 10000 //Km2 to Ha
+        let area = self.reduce((area: 0.0, prev: last)) {
+            
+            let (area, p1) = $0
+            let p2 = $1
+            
+            return (
+                area: area + (p1.latitude * p2.longitude) - (p1.longitude * p2.latitude),
+                prev: p2
+            )
+            
+        }.area
         
-        return areaHa
+        return abs(area / 2.0 * 1000000 * 0.952)
+        
     }
+    
 }
