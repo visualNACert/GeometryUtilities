@@ -144,21 +144,38 @@ class CLLocationCoordinate2DBasicOperatorsTest: XCTestCase {
         
     }
     
-    func test__distance() {
+    func test__distance_short() {
         
         let start = CLLocationCoordinate2D(
-            latitude: 0,
-            longitude: 0
+            latitude: -7.05708,
+            longitude: 37.41640
         )
         
         let end = CLLocationCoordinate2D(
-            latitude: 4,
-            longitude: 3
+            latitude: -7.06043,
+            longitude: 37.41913
         )
         
-        expect(start.distance(to: end)).to(beCloseTo(5, within: 0.1))
-        expect(end.distance(to: start)).to(beCloseTo(5, within: 0.1))
+        expect(start.distance(to: end)).to(beCloseTo(478, within: 1))
+        expect(end.distance(to: start)).to(beCloseTo(478, within: 1))
         
+    }
+    
+    func test__distance_long() {
+        
+        let start = CLLocationCoordinate2D(
+            latitude: -0.3769683837890625,
+            longitude: 39.4697981368123
+        )
+        
+        let end = CLLocationCoordinate2D(
+            latitude: -3.6916959285736084,
+            longitude: 40.41880995132973
+        )
+        
+        expect(start.distance(to: end)).to(beCloseTo(302000, within: 100000))
+        expect(end.distance(to: start)).to(beCloseTo(302000, within: 100000))
+  
     }
     
     func test__multiply_double() {
