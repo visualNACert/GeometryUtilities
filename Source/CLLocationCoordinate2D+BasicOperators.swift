@@ -101,18 +101,39 @@ public func abs(_ value: CLLocationCoordinate2D) -> CLLocationCoordinate2D {
 extension CLLocationCoordinate2D {
 
 	/**
-     Returns distance from this coordinate to given one.
+     Returns distance in meters from this coordinate to given one.
 
      - parameter coordinate: Coordinate to which distance will be computed.
 
-     - returns: Distance using Pytagora's theorem.
+     - returns: Distance in meters.
      */
     @available(*, introduced: 1.2.0)
 	public func distance(to coordinate: CLLocationCoordinate2D) -> Double {
-		let delta = self - coordinate
-		return sqrt(
-			delta.latitude * delta.latitude + delta.longitude * delta.longitude
-		)
+        
+        let earthRadiusInMeters: Double = 6371000
+        
+        let radians: (Double) -> Double = { $0 * .pi / 180 }
+        
+		let deltaInRadians = (self - coordinate) * .pi / 180
+        
+        let sinHalfLatitude = sin(deltaInRadians.latitude / 2)
+        let sinHalfLongitude = sin(deltaInRadians.longitude / 2)
+        
+        let cosSourceLatitudeInRadians = cos(radians(self.latitude))
+        let cosTargetLatitudeInRadians = cos(radians(coordinate.latitude))
+        
+        let sinHalfLatitudeSquare = sinHalfLatitude * sinHalfLatitude
+        let sinHalfLongitudeSquare = sinHalfLongitude * sinHalfLongitude
+        
+        let a =
+            sinHalfLatitudeSquare +
+            cosSourceLatitudeInRadians * cosTargetLatitudeInRadians *
+            sinHalfLongitudeSquare
+        
+        let c = 2 * atan2(sqrt(a), sqrt(1 - a))
+        
+		return earthRadiusInMeters * c
+        
 	}
 
 }
