@@ -44,7 +44,7 @@ extension MKPolygon {
 		let currentMapPoint = MKMapPointForCoordinate(coordinates)
 		let polygonViewPoint = polygonRenderer.point(for: currentMapPoint)
 
-        return polygonRenderer.path.contains(polygonViewPoint)
+        return polygonRenderer.path?.contains(polygonViewPoint) ?? false
 
 	}
 
