@@ -51,8 +51,7 @@ class CLLocationCoordinate2DAreaTest: XCTestCase {
             CLLocationCoordinate2D(latitude: -0.33394575119018555, longitude: 39.5895490191667)
         ]
         
-        let areaInHa = coordinates.area()
-        let areaInM2 = areaInHa * 10000
+        let areaInM2 = coordinates.area()
         
         expect(areaInM2).to(beCloseTo(34.13, within: 1))
         
@@ -67,8 +66,7 @@ class CLLocationCoordinate2DAreaTest: XCTestCase {
             CLLocationCoordinate2D(latitude: -0.33247455954551697, longitude: 39.5895211148043)
         ]
         
-        let areaInHa = coordinates.area()
-        let areaInM2 = areaInHa * 10000
+        let areaInM2 = coordinates.area()
         
         expect(areaInM2).to(beCloseTo(361.88, within: 1))
         
@@ -107,8 +105,7 @@ class CLLocationCoordinate2DAreaTest: XCTestCase {
             CLLocationCoordinate2D(latitude: -0.3322197496891022, longitude: 39.5900101540830)
         ]
         
-        let areaInHa = coordinates.area()
-        let areaInM2 = areaInHa * 10000
+        let areaInM2 = coordinates.area()
         
         expect(areaInM2).to(beCloseTo(83.93, within: 1))
         
@@ -127,8 +124,7 @@ class CLLocationCoordinate2DAreaTest: XCTestCase {
             CLLocationCoordinate2D(latitude: -0.3326616436243057, longitude: 39.5889474822725)
         ]
         
-        let areaInHa = coordinates.area()
-        let areaInM2 = areaInHa * 10000
+        let areaInM2 = coordinates.area()
         
         expect(areaInM2).to(beCloseTo(138, within: 1))
         
@@ -157,8 +153,7 @@ class CLLocationCoordinate2DAreaTest: XCTestCase {
             CLLocationCoordinate2D(latitude: 26.836697459220886, longitude: 69.4481868754865)
         ]
         
-        let areaInHa = coordinates.area()
-        let areaInM2 = areaInHa * 10000
+        let areaInM2 = coordinates.area()
         
         expect(areaInM2).to(beCloseTo(4474.24, within: 1))
         
@@ -181,8 +176,7 @@ class CLLocationCoordinate2DAreaTest: XCTestCase {
             CLLocationCoordinate2D(latitude: 22.965357899665833, longitude: -33.7587855281152)
         ]
         
-        let areaInHa = coordinates.area()
-        let areaInM2 = areaInHa * 10000
+        let areaInM2 = coordinates.area()
         
         expect(areaInM2).to(beCloseTo(9941.48, within: 1))
         
